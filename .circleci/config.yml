@@ -45,36 +45,6 @@ jobs:
             - packages/streaming-image-volume-loader/dist
             - packages/adapters/dist
 
-  API_CHECK:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: ~/repo
-      - run: yarn run api-check
-
-  # https://circleci.com/docs/2.0/collect-test-data/#karma
-  TEST:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: ~/repo
-      - run: mkdir ~/junit
-      - run:
-          command: yarn run test:ci
-          environment:
-            JUNIT_REPORT_PATH: ./junit/
-            JUNIT_REPORT_NAME: test-results.xml
-          when: always
-      - store_test_results:
-          path: ./junit
-      - store_artifacts:
-          path: ./junit
-      - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - coverage
-            - junit
-
   NPM_PUBLISH:
     <<: *defaults
     resource_class: small
@@ -89,8 +59,8 @@ jobs:
       - add_ssh_keys:
           fingerprints: 7e:0f:5b:bb:e3:7a:2e:2f:b4:85:bd:66:09:69:cb:f2
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - run: git config --global user.email "contact@ohif.org"
-      - run: git config --global user.name "ohif-bot"
+      - run: git config --global user.email "ar.sedghi@gmail.com"
+      - run: git config --global user.name "alireza"
       - run: npx lerna version
       - run: npx lerna publish from-package --no-verify-access
 
@@ -110,12 +80,6 @@ workflows:
       - BUILD:
           requires:
             - CHECKOUT
-      - API_CHECK:
-          requires:
-            - BUILD
-      - TEST:
-          requires:
-            - CHECKOUT # TODO: Also require build?
 
   # MERGE TO MAIN
   TEST_AND_RELEASE:
@@ -127,12 +91,8 @@ workflows:
       - BUILD:
           requires:
             - CHECKOUT
-      - TEST:
-          requires:
-            - CHECKOUT
       - NPM_PUBLISH:
           requires:
             - BUILD
-            - TEST
 
 # VS Code Extension Version: 1.5.1

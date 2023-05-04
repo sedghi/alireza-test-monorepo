@@ -126,6 +126,7 @@ type SetVOIOptions = {
  * An object representing a single stack viewport, which is a camera
  * looking into an internal viewport, and an associated target output `canvas`.
  *
+ *
  * StackViewports can be rendered using both GPU and a fallback CPU is the GPU
  * is not available (or low performance). Read more about StackViewports in
  * the documentation section of this website.

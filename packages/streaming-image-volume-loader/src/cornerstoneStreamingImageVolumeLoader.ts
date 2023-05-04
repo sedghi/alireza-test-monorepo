@@ -31,6 +31,7 @@ interface IVolumeLoader {
  * volume loader if the schema for the volumeID is `cornerstoneStreamingImageVolume`.
  * This function returns a promise that resolves to the StreamingImageVolume instance.
  *
+ *
  * In order to use the cornerstoneStreamingImageVolumeLoader you should use
  * createAndCacheVolume helper from the cornerstone-core volumeLoader module.
  *

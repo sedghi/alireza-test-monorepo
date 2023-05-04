@@ -18,6 +18,7 @@ let defaultManager = defaultFrameOfReferenceSpecificAnnotationManager;
 
 /**
  * It returns the default annotations manager.
+ * It returns the default annotations manager.
  * @returns the singleton default annotations manager.
  */
 function getAnnotationManager() {

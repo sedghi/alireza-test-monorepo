@@ -8,7 +8,7 @@
       ],
       "@alireza-test-monorepo/core": ["core/src"],
       "@alireza-test-monorepo/tools": ["tools/src"],
-      "@cornerstonejs/dicomImageLoader": ["dicomImageLoader/src"],
+      "@alireza-test-monorepo/dicom-image-loader": ["tools/src"],
     }
   }
 }

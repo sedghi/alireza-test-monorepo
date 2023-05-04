@@ -15,7 +15,7 @@
     "exports": {
         ".": "./dist/@alireza-test-monorepo/adapters.es.js"
     },
-    "types": "./dist/@cornerstonejs/dts/index.d.ts",
+    "types": "./dist/@alireza-test-monorepo/dts/index.d.ts",
     "publishConfig": {
         "access": "public"
     },

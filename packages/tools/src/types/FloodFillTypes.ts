@@ -1,4 +1,4 @@
-import { Types } from '@cornerstonejs/core';
+import { Types } from '@alireza-test-monorepo/core';
 
 type FloodFillResult = {
   flooded: Types.Point2[] | Types.Point3[];

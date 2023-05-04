@@ -1,4 +1,4 @@
-import type { Types } from '@cornerstonejs/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 export type canvasCoordinates = [
   Types.Point2, // center

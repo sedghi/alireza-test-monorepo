@@ -1,4 +1,4 @@
-import { utilities } from '@cornerstonejs/core';
+import { utilities } from '@alireza-test-monorepo/core';
 import MouseCursor from './MouseCursor';
 
 const DEFAULT_NAME = 'image-cursor';

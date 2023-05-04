@@ -5,7 +5,7 @@ import {
   eventTarget,
   EVENTS,
   utilities as csUtils,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import { ScrollOptions, EventTypes } from '../types';
 
 /**

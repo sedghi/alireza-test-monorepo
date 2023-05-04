@@ -3,7 +3,7 @@ import {
   Types,
   Enums,
   getRenderingEngine,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import {
   initDemo,
   createImageIdsAndCacheMetaData,
@@ -11,7 +11,7 @@ import {
   addDropdownToToolbar,
   addButtonToToolbar,
 } from '../../../../utils/demo/helpers';
-import * as cornerstoneTools from '@cornerstonejs/tools';
+import * as cornerstoneTools from '@alireza-test-monorepo/tools';
 import {
   _convertVolumeToStackViewport,
   _convertStackToVolumeViewport,

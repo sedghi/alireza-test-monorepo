@@ -1,4 +1,4 @@
-import type { Types } from '@cornerstonejs/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 /**
  * Calculates the area of an array of `Point2` points using the shoelace algorithm.

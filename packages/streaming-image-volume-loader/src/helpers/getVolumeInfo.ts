@@ -1,5 +1,5 @@
-import { cache, utilities, Enums } from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+import { cache, utilities, Enums } from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 import { vec3 } from 'gl-matrix';
 import makeVolumeMetadata from './makeVolumeMetadata';
 import sortImageIdsAndGetSpacing from './sortImageIdsAndGetSpacing';

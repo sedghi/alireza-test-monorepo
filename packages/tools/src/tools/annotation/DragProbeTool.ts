@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { getEnabledElement } from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+import { getEnabledElement } from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 import {
   drawHandles as drawHandlesSvg,

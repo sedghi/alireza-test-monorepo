@@ -1,6 +1,6 @@
 import { vec3 } from 'gl-matrix';
-import { metaData, getConfiguration } from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+import { metaData, getConfiguration } from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 type SortedImageIdsItem = {
   zSpacing: number;

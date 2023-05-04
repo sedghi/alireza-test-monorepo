@@ -5,7 +5,7 @@ import {
   metaData,
   getRenderingEngine,
   Types,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import {
   initDemo,
   setTitleAndDescription,

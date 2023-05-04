@@ -10,7 +10,7 @@ import {
   Enums,
   setVolumesForViewports,
   volumeLoader,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import {
   addTool,
   BrushTool,
@@ -21,7 +21,7 @@ import {
   ZoomTool,
   segmentation,
   Enums as csToolsEnums,
-} from '@cornerstonejs/tools';
+} from '@alireza-test-monorepo/tools';
 import {
   initDemo,
   createImageIdsAndCacheMetaData,

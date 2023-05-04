@@ -1,4 +1,4 @@
-import type { Types } from '@cornerstonejs/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 // Returns sign of number
 function sign(x: any) {

@@ -4,8 +4,8 @@ import {
   cache,
   getEnabledElement,
   metaData,
-} from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 import { vec2 } from 'gl-matrix';
 

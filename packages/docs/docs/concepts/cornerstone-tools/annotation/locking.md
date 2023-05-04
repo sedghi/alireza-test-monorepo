@@ -13,7 +13,7 @@ the locking API to lock/unlock annotations.
 There are various APIs for locking and unlocking annotations along with get/set methods
 
 ```js
-import { annotations } from '@cornerstonejs/tools';
+import { annotations } from '@alireza-test-monorepo/tools';
 
 // locking of an annotation
 annotations.locking.setAnnotationLocked(annotation, (locked = true));

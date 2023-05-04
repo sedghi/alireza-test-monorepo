@@ -1,4 +1,4 @@
-import type { Types } from '@cornerstonejs/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 /**
  * Given an array of viewports, returns a list of viewports that are viewing a

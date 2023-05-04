@@ -1,6 +1,6 @@
 import { vec3 } from 'gl-matrix';
-import { CONSTANTS, metaData } from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+import { CONSTANTS, metaData } from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 import { Annotations, Annotation } from '../../types';
 import { debug } from 'console';
 

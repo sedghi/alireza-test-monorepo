@@ -2,8 +2,8 @@ import {
   StackViewport,
   utilities,
   BaseVolumeViewport,
-} from '@cornerstonejs/core';
-import { Types } from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
+import { Types } from '@alireza-test-monorepo/core';
 import { ToolModes } from '../../enums';
 import { InteractionTypes, ToolProps, PublicToolProps } from '../../types';
 

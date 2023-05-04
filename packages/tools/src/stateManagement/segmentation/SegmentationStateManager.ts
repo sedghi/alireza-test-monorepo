@@ -1,4 +1,4 @@
-import { utilities as csUtils } from '@cornerstonejs/core';
+import { utilities as csUtils } from '@alireza-test-monorepo/core';
 import cloneDeep from 'lodash.clonedeep';
 
 import CORNERSTONE_COLOR_LUT from '../../constants/COLOR_LUT';

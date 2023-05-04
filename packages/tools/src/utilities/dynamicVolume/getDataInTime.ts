@@ -1,4 +1,4 @@
-import { utilities, cache, Types } from '@cornerstonejs/core';
+import { utilities, cache, Types } from '@alireza-test-monorepo/core';
 
 /**
  * Gets the scalar data for a series of time points for either a single

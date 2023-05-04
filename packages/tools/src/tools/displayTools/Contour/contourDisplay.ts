@@ -2,7 +2,7 @@ import {
   getEnabledElementByIds,
   Types,
   utilities as csUtils,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 
 import Representations from '../../../enums/SegmentationRepresentations';
 import * as SegmentationConfig from '../../../stateManagement/segmentation/config/segmentationConfig';

@@ -1,5 +1,5 @@
-import { metaData } from '@cornerstonejs/core';
-import cornerstoneDICOMImageLoader from '@cornerstonejs/dicom-image-loader';
+import { metaData } from '@alireza-test-monorepo/core';
+import cornerstoneDICOMImageLoader from '@alireza-test-monorepo/dicom-image-loader';
 /**
  * preloads imageIds metadata in memory
  **/

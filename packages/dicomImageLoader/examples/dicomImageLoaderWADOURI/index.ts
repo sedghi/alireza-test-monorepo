@@ -5,8 +5,8 @@ import {
   Enums,
   setUseCPURendering,
   setPreferSizeOverAccuracy,
-} from '@cornerstonejs/core';
-import * as cornerstoneTools from '@cornerstonejs/tools';
+} from '@alireza-test-monorepo/core';
+import * as cornerstoneTools from '@alireza-test-monorepo/tools';
 import uids from '../uids';
 const {
   PanTool,

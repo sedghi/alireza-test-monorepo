@@ -95,7 +95,7 @@ type TouchDragEventDetail = NormalizedTouchEventDetail & {
 You can add an event listener to the element for the event.
 
 ```js
-import Events from '@cornerstonejs/tools/enums/Events';
+import Events from '@alireza-test-monorepo/tools/enums/Events';
 // element is the cornerstone viewport element
 element.addEventListener(Events.TOUCH_DRAG, (evt) => {
   // my function on drag

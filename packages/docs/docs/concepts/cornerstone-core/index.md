@@ -8,7 +8,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 # Core Introduction
 
-This section describes the core concepts in the `Cornerstone3D` (`@cornerstonejs/core`).
+This section describes the core concepts in the `Cornerstone3D` (`@alireza-test-monorepo/core`).
 `Cornerstone3D` is more than a "rendering" library. It handles:
 
 - rendering of the image (both using GPU or CPU)

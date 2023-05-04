@@ -1,4 +1,4 @@
-import cornerstoneDICOMImageLoader from '@cornerstonejs/dicom-image-loader';
+import cornerstoneDICOMImageLoader from '@alireza-test-monorepo/dicom-image-loader';
 import {
   RenderingEngine,
   Types,
@@ -7,7 +7,7 @@ import {
   volumeLoader,
   getRenderingEngine,
   cache,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import {
   initDemo,
   createImageIdsAndCacheMetaData,
@@ -18,7 +18,7 @@ import {
   addDropdownToToolbar,
   addSliderToToolbar,
 } from '../../../../utils/demo/helpers';
-import * as cornerstoneTools from '@cornerstonejs/tools';
+import * as cornerstoneTools from '@alireza-test-monorepo/tools';
 
 const {
   ToolGroupManager,

@@ -1,4 +1,4 @@
-import * as cornerstoneStreamingImageVolumeLoader from '@cornerstonejs/streaming-image-volume-loader';
+import * as cornerstoneStreamingImageVolumeLoader from '@alireza-test-monorepo/streaming-image-volume-loader';
 import * as cornerstone from '../src/index';
 import { createFloat32SharedArray } from '../src/utilities';
 

@@ -3,11 +3,11 @@
   "compilerOptions": {
     "baseUrl": "./packages",
     "paths": {
-      "@cornerstonejs/streaming-image-volume-loader": [
+      "@alireza-test-monorepo/streaming-image-volume-loader": [
         "streaming-image-volume-loader/src"
       ],
-      "@cornerstonejs/core": ["core/src"],
-      "@cornerstonejs/tools": ["tools/src"],
+      "@alireza-test-monorepo/core": ["core/src"],
+      "@alireza-test-monorepo/tools": ["tools/src"],
       "@cornerstonejs/dicomImageLoader": ["dicomImageLoader/src"],
     }
   }

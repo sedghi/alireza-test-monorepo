@@ -1,4 +1,4 @@
-import { Types } from '@cornerstonejs/core';
+import { Types } from '@alireza-test-monorepo/core';
 
 /**
  * Return the midpoint (think average) of all the provided points.

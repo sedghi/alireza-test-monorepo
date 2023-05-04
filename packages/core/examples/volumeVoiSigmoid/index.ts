@@ -4,7 +4,7 @@ import {
   Enums,
   volumeLoader,
   getRenderingEngine,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import {
   initDemo,
   createImageIdsAndCacheMetaData,
@@ -12,7 +12,7 @@ import {
   addButtonToToolbar,
 } from '../../../../utils/demo/helpers';
 
-import * as cornerstoneTools from '@cornerstonejs/tools';
+import * as cornerstoneTools from '@alireza-test-monorepo/tools';
 
 const {
   WindowLevelTool,

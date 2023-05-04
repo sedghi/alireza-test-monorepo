@@ -1,4 +1,4 @@
-import type { Types } from '@cornerstonejs/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 /**
  * Determine the coordinates that will place the textbox to the right of the

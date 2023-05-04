@@ -1,5 +1,5 @@
-import { getEnabledElement, triggerEvent } from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+import { getEnabledElement, triggerEvent } from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 import Events from '../../enums/Events';
 import mouseMoveListener from './mouseMoveListener';

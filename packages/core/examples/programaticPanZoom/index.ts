@@ -3,7 +3,7 @@ import {
   RenderingEngine,
   Types,
   Enums,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import {
   initDemo,
   createImageIdsAndCacheMetaData,

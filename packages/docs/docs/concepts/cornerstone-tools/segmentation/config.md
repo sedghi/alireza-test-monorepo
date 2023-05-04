@@ -63,7 +63,7 @@ const toolGroupConfiguration = {
 The api for the segmentation representation configurations are
 
 ```js
-import {segmentation, Enums} from '@cornerstonejs/tools
+import {segmentation, Enums} from '@alireza-test-monorepo/tools
 
 // Get the global configuration
 segmentation.config.getGlobalConfig()
@@ -95,7 +95,7 @@ Read more about the [**Labelmap Configuration**](/api/tools/namespace/Types#Labe
 `visibility` API to hide/show each representation.
 
 ```js
-import { segmentation } from '@cornerstonejs/tools
+import { segmentation } from '@alireza-test-monorepo/tools
 
 // set the visibility of a segmentation representation for a toolGroup
 segmentation.config.visibility.setSegmentationVisibility(toolGroupId, representationUID, visibility)
@@ -119,7 +119,7 @@ use too.
 :::
 
 ```js
-import { segmentation } from '@cornerstonejs/tools
+import { segmentation } from '@alireza-test-monorepo/tools
 
 // add color LUT for use with a segmentation representation
 segmentation.config.color.addColorLUT(colorLUT, colorLUTIndex)

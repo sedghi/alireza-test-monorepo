@@ -29,7 +29,7 @@ module.exports = {
   },
   devtool: 'source-map',
   externals: [
-    '@cornerstonejs/core',
+    '@alireza-test-monorepo/core',
     'uuid',
     {
       'dicom-parser': {

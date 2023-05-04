@@ -5,7 +5,7 @@ import {
   utilities as csUtils,
   volumeLoader,
   setVolumesForViewports,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import {
   initDemo,
   createImageIdsAndCacheMetaData,
@@ -13,7 +13,7 @@ import {
   addButtonToToolbar,
   addSliderToToolbar,
 } from '../../../../utils/demo/helpers';
-import * as cornerstoneTools from '@cornerstonejs/tools';
+import * as cornerstoneTools from '@alireza-test-monorepo/tools';
 
 // This is for debugging purposes
 console.warn(

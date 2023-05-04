@@ -1,4 +1,4 @@
-import { Types } from '@cornerstonejs/core';
+import { Types } from '@alireza-test-monorepo/core';
 import { AnnotationTool } from '../tools';
 import { Annotation, Annotations } from './AnnotationTypes';
 

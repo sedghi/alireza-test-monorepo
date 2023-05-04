@@ -1,4 +1,4 @@
-import { getRenderingEngines } from '@cornerstonejs/core';
+import { getRenderingEngines } from '@alireza-test-monorepo/core';
 import { triggerAnnotationRenderForViewportIds } from '../../utilities';
 
 /**

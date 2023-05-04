@@ -1,4 +1,4 @@
-import { cache } from '@cornerstonejs/core';
+import { cache } from '@alireza-test-monorepo/core';
 
 import triggerSegmentationRender from '../../utilities/segmentation/triggerSegmentationRender';
 import SegmentationRepresentations from '../../enums/SegmentationRepresentations';

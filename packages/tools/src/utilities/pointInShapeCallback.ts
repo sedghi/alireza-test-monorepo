@@ -1,5 +1,5 @@
 import { vec3 } from 'gl-matrix';
-import type { Types } from '@cornerstonejs/core';
+import type { Types } from '@alireza-test-monorepo/core';
 import type { vtkImageData } from '@kitware/vtk.js/Common/DataModel/ImageData';
 import BoundsIJK from '../types/BoundsIJK';
 

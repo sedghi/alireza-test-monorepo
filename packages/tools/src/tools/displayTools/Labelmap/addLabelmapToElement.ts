@@ -3,7 +3,7 @@ import {
   addVolumesToViewports,
   Types,
   Enums,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 
 /**
  * It adds a labelmap segmentation representation of the viewport's HTML Element.

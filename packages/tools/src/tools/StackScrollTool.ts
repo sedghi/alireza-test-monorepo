@@ -3,7 +3,7 @@ import {
   VolumeViewport,
   StackViewport,
   utilities as csUtils,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import { BaseTool } from './base';
 import { scroll } from '../utilities';
 import { PublicToolProps, ToolProps, EventTypes } from '../types';

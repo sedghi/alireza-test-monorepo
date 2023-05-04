@@ -38,7 +38,7 @@ After creating a renderingEngine, we can assign viewports to it for rendering. T
 You can instantiate a `RenderingEngine` by calling the `new RenderingEngine()` method.
 
 ```js
-import { RenderingEngine } from '@cornerstonejs/core';
+import { RenderingEngine } from '@alireza-test-monorepo/core';
 
 const renderingEngineId = 'myEngine';
 const renderingEngine = new RenderingEngine(renderingEngineId);

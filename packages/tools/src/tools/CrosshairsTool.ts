@@ -9,8 +9,8 @@ import {
   getEnabledElement,
   utilities as csUtils,
   Enums,
-} from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 import {
   getToolGroup,
@@ -50,7 +50,7 @@ import {
 } from '../types';
 import { isAnnotationLocked } from '../stateManagement/annotation/annotationLocking';
 import triggerAnnotationRenderForViewportIds from '../utilities/triggerAnnotationRenderForViewportIds';
-import { CONSTANTS } from '@cornerstonejs/core';
+import { CONSTANTS } from '@alireza-test-monorepo/core';
 
 const { RENDERING_DEFAULTS } = CONSTANTS;
 

@@ -4,8 +4,8 @@ import {
   VolumeViewport,
   StackViewport,
   cache,
-} from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 import { vec4 } from 'gl-matrix';
 

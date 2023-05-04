@@ -1,5 +1,5 @@
 import { createSynchronizer } from '../../store/SynchronizerManager';
-import { Enums } from '@cornerstonejs/core';
+import { Enums } from '@alireza-test-monorepo/core';
 import zoomPanSyncCallback from '../callbacks/zoomPanSyncCallback';
 import Synchronizer from '../../store/SynchronizerManager/Synchronizer';
 

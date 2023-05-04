@@ -1,9 +1,9 @@
 {
-    "name": "@cornerstonejs/adapters",
+    "name": "@alireza-test-monorepo/adapters",
     "version": "0.6.0",
     "description": "Adapters for Cornerstone3D to/from formats including DICOM SR and others",
     "src": "src/index.ts",
-    "main": "./dist/@cornerstonejs/adapters.es.js",
+    "main": "./dist/@alireza-test-monorepo/adapters.es.js",
     "module": "src/index.ts",
     "files": [
         "dist"
@@ -13,7 +13,7 @@
         "build": "dist"
     },
     "exports": {
-        ".": "./dist/@cornerstonejs/adapters.es.js"
+        ".": "./dist/@alireza-test-monorepo/adapters.es.js"
     },
     "types": "./dist/@cornerstonejs/dts/index.d.ts",
     "publishConfig": {

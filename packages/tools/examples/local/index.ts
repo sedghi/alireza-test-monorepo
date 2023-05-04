@@ -1,6 +1,6 @@
-import { RenderingEngine, Types, Enums, metaData } from '@cornerstonejs/core';
-import cornerstoneDICOMImageLoader from '@cornerstonejs/dicom-image-loader';
-import * as cornerstoneTools from '@cornerstonejs/tools';
+import { RenderingEngine, Types, Enums, metaData } from '@alireza-test-monorepo/core';
+import cornerstoneDICOMImageLoader from '@alireza-test-monorepo/dicom-image-loader';
+import * as cornerstoneTools from '@alireza-test-monorepo/tools';
 import htmlSetup from './htmlSetup';
 import uids from './uids';
 

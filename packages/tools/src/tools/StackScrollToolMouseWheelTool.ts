@@ -2,7 +2,7 @@ import {
   getEnabledElement,
   VolumeViewport,
   StackViewport,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import { BaseTool } from './base';
 import { MouseWheelEventType } from '../types/EventTypes';
 import { scrollVolume } from '../utilities/scroll';

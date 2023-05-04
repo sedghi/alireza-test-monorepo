@@ -2,7 +2,7 @@ import {
   BaseVolumeViewport,
   getEnabledElement,
   Types,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import { mat4, vec3 } from 'gl-matrix';
 import { BaseTool } from './base';
 import angleBetweenLines from '../utilities/math/angle/angleBetweenLines';

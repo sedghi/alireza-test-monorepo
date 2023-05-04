@@ -13,7 +13,7 @@ the visibility API to show/hide annotations.
 There are various APIs for showing and hiding annotations along with get/set methods
 
 ```js
-import { annotations } from '@cornerstonejs/tools';
+import { annotations } from '@alireza-test-monorepo/tools';
 
 // changing an annotation visibility to be visible (implicit visible param).
 annotations.visibility.setAnnotationVisibility(annotationUID);

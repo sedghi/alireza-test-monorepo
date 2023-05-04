@@ -3,7 +3,7 @@ import {
   Types,
   Enums,
   getRenderingEngine,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import {
   initDemo,
   createImageIdsAndCacheMetaData,
@@ -18,7 +18,7 @@ import {
   annotation,
   addTool,
   Types as CSToolsTypes,
-} from '@cornerstonejs/tools';
+} from '@alireza-test-monorepo/tools';
 
 // This is for debugging purposes
 console.warn(

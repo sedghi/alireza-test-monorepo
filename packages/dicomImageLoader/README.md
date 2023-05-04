@@ -40,7 +40,7 @@ HTTP based server that returns DICOM P10 instances (e.g.
 ### NPM
 
 ```bash
-yarn add @cornerstonejs/dicom-image-loader
+yarn add @alireza-test-monorepo/dicom-image-loader
 ```
 
 
@@ -73,13 +73,13 @@ configuring.
 To be able to use the dynamic import feature for CDIL, instead of
 
 ```js
-import cornerstoneDICOMImageLoader from '@cornerstonejs/dicom-image-loader';
+import cornerstoneDICOMImageLoader from '@alireza-test-monorepo/dicom-image-loader';
 ```
 
 you need to do:
 
 ```js
-import cornerstoneDICOMImageLoader from '@cornerstonejs/dicom-image-loader/dist/dynamic-import/cornerstoneDICOMImageLoader.min.js';
+import cornerstoneDICOMImageLoader from '@alireza-test-monorepo/dicom-image-loader/dist/dynamic-import/cornerstoneDICOMImageLoader.min.js';
 ```
 
 This way, codecs are loaded dynamically when needed. You have another option to
@@ -88,8 +88,8 @@ create an alias in the webpack config file:
 ```js
 resolve: {
   alias: {
-    '@cornerstonejs/dicom-image-loader':
-      '@cornerstonejs/dicom-image-loader/dist/dynamic-import/cornerstoneDICOMImageLoader.min.js',
+    '@alireza-test-monorepo/dicom-image-loader':
+      '@alireza-test-monorepo/dicom-image-loader/dist/dynamic-import/cornerstoneDICOMImageLoader.min.js',
   },
 },
 ```
@@ -103,7 +103,7 @@ folder. You can use `CopyWebpackPlugin` to copy the WASM files to the build fold
   new CopyWebpackPlugin([
     {
       from:
-        '../../../node_modules/@cornerstonejs/dicom-image-loader/dist/dynamic-import',
+        '../../../node_modules/@alireza-test-monorepo/dicom-image-loader/dist/dynamic-import',
       to: DIST_DIR,
     },
   ]),
@@ -159,9 +159,9 @@ See [transfer syntaxes](docs/TransferSyntaxes.md)
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE
 
-[npm-url]: https://npmjs.org/package/@cornerstonejs/dicom-image-loader
-[npm-version-image]: http://img.shields.io/npm/v/@cornerstonejs/dicom-image-loader.svg?style=flat
-[npm-downloads-image]: http://img.shields.io/npm/dm/@cornerstonejs/dicom-image-loader.svg?style=flat
+[npm-url]: https://npmjs.org/package/@alireza-test-monorepo/dicom-image-loader
+[npm-version-image]: http://img.shields.io/npm/v/@alireza-test-monorepo/dicom-image-loader.svg?style=flat
+[npm-downloads-image]: http://img.shields.io/npm/dm/@alireza-test-monorepo/dicom-image-loader.svg?style=flat
 
 [travis-url]: http://travis-ci.org/cornerstonejs/cornerstoneDICOMImageLoader
 [travis-image]: https://travis-ci.org/cornerstonejs/cornerstoneDICOMImageLoader.svg?branch=master

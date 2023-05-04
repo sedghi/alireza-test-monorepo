@@ -1,4 +1,4 @@
-import type { Types } from '@cornerstonejs/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 /**
  * Uses the current bounds of the 2D rectangle and extends it in the view axis by numSlices

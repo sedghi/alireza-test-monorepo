@@ -1,5 +1,5 @@
-import { getEnabledElement } from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+import { getEnabledElement } from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 import { state } from '../../../store';
 import { Events } from '../../../enums';
 import {

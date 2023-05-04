@@ -4,8 +4,8 @@ import {
   VolumeViewport,
   utilities,
   getEnabledElementByIds,
-} from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 import {
   addAnnotation,
   getAnnotations,

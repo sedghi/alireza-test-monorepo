@@ -3,8 +3,8 @@ import {
   getRenderingEngines,
   CONSTANTS,
   utilities as csUtils,
-} from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 import { addAnnotation } from '../stateManagement/annotation/annotationState';
 

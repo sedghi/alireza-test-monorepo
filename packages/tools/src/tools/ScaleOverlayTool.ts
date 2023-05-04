@@ -4,9 +4,9 @@ import {
   getEnabledElementByIds,
   getRenderingEngines,
   utilities as csUtils,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import { ScaleOverlayAnnotation } from '../types/ToolSpecificAnnotationTypes';
-import type { Types } from '@cornerstonejs/core';
+import type { Types } from '@alireza-test-monorepo/core';
 import {
   addAnnotation,
   getAnnotations,

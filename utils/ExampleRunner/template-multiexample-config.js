@@ -77,7 +77,7 @@ module.exports = {
   )}" },
       {
         from:
-          '../../../node_modules/@cornerstonejs/dicom-image-loader/dist/dynamic-import',
+          '../../../node_modules/@alireza-test-monorepo/dicom-image-loader/dist/dynamic-import',
         to: '${destPath.replace(/\\/g, '/')}',
       },
       ],
@@ -95,15 +95,15 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@cornerstonejs/core': '${csRenderBasePath.replace(/\\/g, '/')}',
-      '@cornerstonejs/tools': '${csToolsBasePath.replace(/\\/g, '/')}',
-      '@cornerstonejs/streaming-image-volume-loader': '${csStreamingBasePath.replace(
+      '@alireza-test-monorepo/core': '${csRenderBasePath.replace(/\\/g, '/')}',
+      '@alireza-test-monorepo/tools': '${csToolsBasePath.replace(/\\/g, '/')}',
+      '@alireza-test-monorepo/streaming-image-volume-loader': '${csStreamingBasePath.replace(
         /\\/g,
         '/'
       )}',
       // We use this alias and the CopyPlugin to support using the dynamic-import version
       // of WADO Image Loader
-      '@cornerstonejs/dicom-image-loader': '${csDICOMImageLoaderDistPath.replace(
+      '@alireza-test-monorepo/dicom-image-loader': '${csDICOMImageLoaderDistPath.replace(
         /\\/g,
         '/'
       )}'

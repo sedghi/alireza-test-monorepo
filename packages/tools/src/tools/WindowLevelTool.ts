@@ -6,7 +6,7 @@ import {
   utilities,
   cache,
   Types,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import { EventTypes } from '../types';
 
 // Todo: should move to configuration

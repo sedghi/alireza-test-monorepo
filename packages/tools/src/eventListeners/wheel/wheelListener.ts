@@ -1,4 +1,4 @@
-import { getEnabledElement, triggerEvent } from '@cornerstonejs/core';
+import { getEnabledElement, triggerEvent } from '@alireza-test-monorepo/core';
 import normalizeWheel from './normalizeWheel';
 import Events from '../../enums/Events';
 // ~~ VIEWPORT LIBRARY

@@ -7,13 +7,13 @@ import {
   utilities,
   geometryLoader,
   CONSTANTS,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import {
   initDemo,
   createImageIdsAndCacheMetaData,
   setTitleAndDescription,
 } from '../../../../utils/demo/helpers';
-import * as cornerstoneTools from '@cornerstonejs/tools';
+import * as cornerstoneTools from '@alireza-test-monorepo/tools';
 import contour from './Contour.json';
 
 // This is for debugging purposes

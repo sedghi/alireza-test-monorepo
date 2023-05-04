@@ -4,12 +4,12 @@ import {
   Enums,
   volumeLoader,
   getRenderingEngine,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import {
   StackScrollMouseWheelTool,
   ToolGroupManager,
   addTool,
-} from '@cornerstonejs/tools';
+} from '@alireza-test-monorepo/tools';
 import {
   initDemo,
   createImageIdsAndCacheMetaData,

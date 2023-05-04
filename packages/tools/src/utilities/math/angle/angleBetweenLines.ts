@@ -1,4 +1,4 @@
-import type { Types } from '@cornerstonejs/core';
+import type { Types } from '@alireza-test-monorepo/core';
 import { vec3 } from 'gl-matrix';
 
 type Line = [Types.Point3, Types.Point3];

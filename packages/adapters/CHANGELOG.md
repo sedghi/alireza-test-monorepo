@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [0.6.0](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.5.0...@cornerstonejs/adapters@0.6.0) (2023-03-28)
+# [0.6.0](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.5.0...@alireza-test-monorepo/adapters@0.6.0) (2023-03-28)
 
 
 ### Features
@@ -14,7 +14,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.5.0](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.4.2...@cornerstonejs/adapters@0.5.0) (2023-03-22)
+# [0.5.0](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.4.2...@alireza-test-monorepo/adapters@0.5.0) (2023-03-22)
 
 
 ### Features
@@ -25,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.4.2](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.4.1...@cornerstonejs/adapters@0.4.2) (2023-03-22)
+## [0.4.2](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.4.1...@alireza-test-monorepo/adapters@0.4.2) (2023-03-22)
 
 
 ### Bug Fixes
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.4.1](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.4.0...@cornerstonejs/adapters@0.4.1) (2023-03-03)
+## [0.4.1](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.4.0...@alireza-test-monorepo/adapters@0.4.1) (2023-03-03)
 
 
 ### Bug Fixes
@@ -47,7 +47,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.4.0](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.3.2...@cornerstonejs/adapters@0.4.0) (2023-03-03)
+# [0.4.0](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.3.2...@alireza-test-monorepo/adapters@0.4.0) (2023-03-03)
 
 
 ### Features
@@ -58,7 +58,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.3.2](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.3.1...@cornerstonejs/adapters@0.3.2) (2023-02-17)
+## [0.3.2](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.3.1...@alireza-test-monorepo/adapters@0.3.2) (2023-02-17)
 
 
 ### Bug Fixes
@@ -69,7 +69,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.3.1](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.3.0...@cornerstonejs/adapters@0.3.1) (2023-02-16)
+## [0.3.1](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.3.0...@alireza-test-monorepo/adapters@0.3.1) (2023-02-16)
 
 
 ### Bug Fixes
@@ -80,7 +80,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.3.0](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.2.1...@cornerstonejs/adapters@0.3.0) (2023-02-08)
+# [0.3.0](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.2.1...@alireza-test-monorepo/adapters@0.3.0) (2023-02-08)
 
 
 ### Features
@@ -91,7 +91,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.1](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.2.0...@cornerstonejs/adapters@0.2.1) (2023-02-03)
+## [0.2.1](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.2.0...@alireza-test-monorepo/adapters@0.2.1) (2023-02-03)
 
 
 ### Bug Fixes
@@ -102,7 +102,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.2.0](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.1.5...@cornerstonejs/adapters@0.2.0) (2023-01-30)
+# [0.2.0](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.1.5...@alireza-test-monorepo/adapters@0.2.0) (2023-01-30)
 
 
 ### Features
@@ -113,7 +113,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.1.5](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.1.4...@cornerstonejs/adapters@0.1.5) (2023-01-30)
+## [0.1.5](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.1.4...@alireza-test-monorepo/adapters@0.1.5) (2023-01-30)
 
 
 ### Bug Fixes
@@ -124,7 +124,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.1.4](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.1.3...@cornerstonejs/adapters@0.1.4) (2023-01-30)
+## [0.1.4](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.1.3...@alireza-test-monorepo/adapters@0.1.4) (2023-01-30)
 
 
 ### Bug Fixes
@@ -135,7 +135,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.1.3](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.1.2...@cornerstonejs/adapters@0.1.3) (2023-01-28)
+## [0.1.3](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.1.2...@alireza-test-monorepo/adapters@0.1.3) (2023-01-28)
 
 
 ### Bug Fixes
@@ -146,7 +146,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.1.2](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.1.1...@cornerstonejs/adapters@0.1.2) (2023-01-27)
+## [0.1.2](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.1.1...@alireza-test-monorepo/adapters@0.1.2) (2023-01-27)
 
 
 ### Bug Fixes
@@ -157,7 +157,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.1.1](https://github.com/dcmjs-org/dcmjs/compare/@cornerstonejs/adapters@0.1.0...@cornerstonejs/adapters@0.1.1) (2023-01-27)
+## [0.1.1](https://github.com/dcmjs-org/dcmjs/compare/@alireza-test-monorepo/adapters@0.1.0...@alireza-test-monorepo/adapters@0.1.1) (2023-01-27)
 
 
 ### Bug Fixes

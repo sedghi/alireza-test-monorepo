@@ -211,9 +211,9 @@ module.exports = function (config) {
           path: require.resolve('path-browserify'),
         },
         alias: {
-          '@cornerstonejs/core': path.resolve('packages/core/src/index'),
-          '@cornerstonejs/tools': path.resolve('packages/tools/src/index'),
-          '@cornerstonejs/streaming-image-volume-loader': path.resolve(
+          '@alireza-test-monorepo/core': path.resolve('packages/core/src/index'),
+          '@alireza-test-monorepo/tools': path.resolve('packages/tools/src/index'),
+          '@alireza-test-monorepo/streaming-image-volume-loader': path.resolve(
             'packages/streaming-image-volume-loader/src/index'
           ),
           '@cornerstonejs/dicomImageLoader': path.resolve(

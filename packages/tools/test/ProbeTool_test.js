@@ -1,4 +1,4 @@
-import * as cornerstone3D from '@cornerstonejs/core';
+import * as cornerstone3D from '@alireza-test-monorepo/core';
 import * as csTools3d from '../src/index';
 import * as testUtils from '../../../utils/test/testUtils';
 import { performMouseDownAndUp } from '../../../utils/test/testUtilsMouseEvents';

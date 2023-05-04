@@ -5,9 +5,9 @@ import {
   setVolumesForViewports,
   utilities,
   cache,
-} from '@cornerstonejs/core';
-import { StreamingImageVolume } from '@cornerstonejs/streaming-image-volume-loader';
-import { Types as cstTypes } from '@cornerstonejs/tools';
+} from '@alireza-test-monorepo/core';
+import { StreamingImageVolume } from '@alireza-test-monorepo/streaming-image-volume-loader';
+import { Types as cstTypes } from '@alireza-test-monorepo/tools';
 
 const { ViewportType } = Enums;
 const VOLUME_LOADER_SCHEME = 'wadors';

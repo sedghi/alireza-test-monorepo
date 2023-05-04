@@ -5,7 +5,7 @@ import {
   setVolumesForViewports,
   volumeLoader,
   getRenderingEngine,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import {
   initDemo,
   createImageIdsAndCacheMetaData,
@@ -15,7 +15,7 @@ import {
   setCtTransferFunctionForVolumeActor,
   addDropdownToToolbar,
 } from '../../../../utils/demo/helpers';
-import * as cornerstoneTools from '@cornerstonejs/tools';
+import * as cornerstoneTools from '@alireza-test-monorepo/tools';
 
 const {
   ToolGroupManager,

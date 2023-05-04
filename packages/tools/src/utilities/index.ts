@@ -34,7 +34,7 @@ import * as touch from './touch';
 import * as dynamicVolume from './dynamicVolume';
 
 // Events
-import { triggerEvent } from '@cornerstonejs/core';
+import { triggerEvent } from '@alireza-test-monorepo/core';
 
 export {
   math,

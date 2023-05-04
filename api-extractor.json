@@ -44,9 +44,9 @@
    * local files for library1.
    */
   "bundledPackages": [
-    "@cornerstonejs/core",
-    "@cornerstonejs/tools",
-    "@cornerstonejs/streaming-image-volume-loader"
+    "@alireza-test-monorepo/core",
+    "@alireza-test-monorepo/tools",
+    "@alireza-test-monorepo/streaming-image-volume-loader"
   ],
 
   /**

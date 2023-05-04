@@ -7,8 +7,8 @@ import {
   Types,
   utilities,
   volumeLoader,
-} from '@cornerstonejs/core';
-import * as cornerstoneTools from '@cornerstonejs/tools';
+} from '@alireza-test-monorepo/core';
+import * as cornerstoneTools from '@alireza-test-monorepo/tools';
 import {
   addSliderToToolbar,
   addToggleButtonToToolbar,

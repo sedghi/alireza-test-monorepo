@@ -1,4 +1,4 @@
-import { cache, Types } from '@cornerstonejs/core';
+import { cache, Types } from '@alireza-test-monorepo/core';
 import vtkActor from '@kitware/vtk.js/Rendering/Core/Actor';
 
 import {

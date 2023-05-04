@@ -81,7 +81,7 @@ we need to add the `segmentation` to the state. This can be done by
 top level API:
 
 ```js
-import { segmentation, Enums } from '@cornerstonejs/tools';
+import { segmentation, Enums } from '@alireza-test-monorepo/tools';
 
 segmentation.addSegmentations([
   {
@@ -124,7 +124,7 @@ import {
   segmentation,
   SegmentationDisplayTool,
   Enums,
-} from '@cornerstonejs/tools';
+} from '@alireza-test-monorepo/tools';
 
 /**
  * Setup toolGroups and addViewports to them before hand

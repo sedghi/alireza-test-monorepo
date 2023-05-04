@@ -1,7 +1,7 @@
-import { getRenderingEngines, utilities } from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+import { getRenderingEngines, utilities } from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
-//import type { Types } from '@cornerstonejs/core'
+//import type { Types } from '@alireza-test-monorepo/core'
 
 type RenderingEngineAndViewportIds = {
   renderingEngine: Types.IRenderingEngine | undefined; //Types.IRenderingEngine | undefined

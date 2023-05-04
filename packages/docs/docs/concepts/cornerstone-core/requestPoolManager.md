@@ -46,7 +46,7 @@ import {
   imageLoadPoolManager,
   loadAndCacheImage,
   RequestType,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 
 function sendRequest(imageId, imageIdIndex, options) {
   return loadAndCacheImage(imageId, options).then(

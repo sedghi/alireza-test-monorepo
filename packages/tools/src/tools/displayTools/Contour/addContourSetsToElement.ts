@@ -1,4 +1,4 @@
-import { cache, Types } from '@cornerstonejs/core';
+import { cache, Types } from '@alireza-test-monorepo/core';
 import vtkDataArray from '@kitware/vtk.js/Common/Core/DataArray';
 import vtkAppendPolyData from '@kitware/vtk.js/Filters/General/AppendPolyData';
 import vtkActor from '@kitware/vtk.js/Rendering/Core/Actor';

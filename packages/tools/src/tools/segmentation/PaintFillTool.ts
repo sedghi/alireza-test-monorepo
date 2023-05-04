@@ -2,8 +2,8 @@ import {
   cache,
   getEnabledElement,
   utilities as csUtils,
-} from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 import { BaseTool } from '../base';
 import { PublicToolProps, ToolProps, EventTypes } from '../../types';

@@ -1,5 +1,5 @@
 import { SegmentationPublicInput } from '../../../types/SegmentationStateTypes';
-import { cache } from '@cornerstonejs/core';
+import { cache } from '@alireza-test-monorepo/core';
 import { LabelmapSegmentationData } from '../../../types/LabelmapTypes';
 
 function validate(segmentationInput: SegmentationPublicInput): void {

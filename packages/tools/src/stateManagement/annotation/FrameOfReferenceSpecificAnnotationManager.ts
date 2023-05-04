@@ -14,7 +14,7 @@ import {
   getEnabledElement,
   Types,
   utilities,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 
 import { checkAndDefineIsLockedProperty } from './annotationLocking';
 import { checkAndDefineIsVisibleProperty } from './annotationVisibility';

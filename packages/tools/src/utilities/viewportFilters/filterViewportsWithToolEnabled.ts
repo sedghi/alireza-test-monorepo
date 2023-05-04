@@ -1,4 +1,4 @@
-import type { Types } from '@cornerstonejs/core';
+import type { Types } from '@alireza-test-monorepo/core';
 import type { IToolGroup } from '../../types';
 import { ToolGroupManager } from '../../store';
 import { ToolModes } from '../../enums';

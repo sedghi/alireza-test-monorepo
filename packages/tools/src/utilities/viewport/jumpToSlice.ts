@@ -4,7 +4,7 @@ import {
   VolumeViewport,
   utilities as csUtils,
   Types,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import JumpToSliceOptions from '../../types/JumpToSliceOptions';
 import clip from '../clip';
 import scroll from '../scroll';

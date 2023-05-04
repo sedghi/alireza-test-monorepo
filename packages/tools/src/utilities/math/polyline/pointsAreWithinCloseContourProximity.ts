@@ -1,5 +1,5 @@
 import { vec2 } from 'gl-matrix';
-import type { Types } from '@cornerstonejs/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 /**
  * Returns true if points `p1` and `p2` are within `closeContourProximity`.

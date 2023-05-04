@@ -3,7 +3,7 @@ import {
   Types,
   Enums,
   volumeLoader,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import {
   initDemo,
   setTitleAndDescription,

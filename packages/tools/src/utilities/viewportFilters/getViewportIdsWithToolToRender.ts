@@ -1,4 +1,4 @@
-import { getEnabledElement } from '@cornerstonejs/core';
+import { getEnabledElement } from '@alireza-test-monorepo/core';
 import filterViewportsWithFrameOfReferenceUID from './filterViewportsWithFrameOfReferenceUID';
 import filterViewportsWithToolEnabled from './filterViewportsWithToolEnabled';
 import filterViewportsWithParallelNormals from './filterViewportsWithParallelNormals';

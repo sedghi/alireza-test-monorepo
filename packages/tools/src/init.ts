@@ -1,4 +1,4 @@
-import { eventTarget, Enums } from '@cornerstonejs/core';
+import { eventTarget, Enums } from '@alireza-test-monorepo/core';
 import { getAnnotationManager } from './stateManagement/annotation/annotationState';
 import { getDefaultSegmentationStateManager } from './stateManagement/segmentation/segmentationState';
 import { Events as TOOLS_EVENTS } from './enums';

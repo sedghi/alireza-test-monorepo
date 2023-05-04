@@ -1,7 +1,7 @@
 import { getToolGroup } from '../../store/ToolGroupManager';
 import BrushTool from '../../tools/segmentation/BrushTool';
 import triggerAnnotationRenderForViewportIds from '../triggerAnnotationRenderForViewportIds';
-import { getRenderingEngine } from '@cornerstonejs/core';
+import { getRenderingEngine } from '@alireza-test-monorepo/core';
 import getBrushToolInstances from './utilities';
 
 export function setBrushSizeForToolGroup(

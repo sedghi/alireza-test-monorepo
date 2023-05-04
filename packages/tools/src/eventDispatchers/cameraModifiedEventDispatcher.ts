@@ -1,4 +1,4 @@
-import { Enums, Types } from '@cornerstonejs/core';
+import { Enums, Types } from '@alireza-test-monorepo/core';
 import { ToolModes } from '../enums';
 import getToolsWithModesForMouseEvent from './shared/getToolsWithModesForMouseEvent';
 

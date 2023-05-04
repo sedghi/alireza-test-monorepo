@@ -5,7 +5,7 @@ import {
   volumeLoader,
   Enums,
   CONSTANTS,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import {
   initDemo,
   createImageIdsAndCacheMetaData,

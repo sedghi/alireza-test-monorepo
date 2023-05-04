@@ -3,8 +3,8 @@ import {
   Enums,
   init as csInit,
   Types,
-} from '@cornerstonejs/core';
-import { init as csTools3dInit } from '@cornerstonejs/tools';
+} from '@alireza-test-monorepo/core';
+import { init as csTools3dInit } from '@alireza-test-monorepo/tools';
 
 // This is for debugging purposes
 console.warn(

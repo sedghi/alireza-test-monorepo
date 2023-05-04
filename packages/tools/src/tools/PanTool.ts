@@ -1,6 +1,6 @@
 import { BaseTool } from './base';
-import { getEnabledElement } from '@cornerstonejs/core';
-import type { Types } from '@cornerstonejs/core';
+import { getEnabledElement } from '@alireza-test-monorepo/core';
+import type { Types } from '@alireza-test-monorepo/core';
 
 import { EventTypes, PublicToolProps, ToolProps } from '../types';
 

@@ -9,7 +9,7 @@ interfaces and functionality are broadly identified as:
 - Metadata Provider
 - Tools
 
-`@cornerstonejs/core` is a "rendering" library built on top of `vtk.js`.
+`@alireza-test-monorepo/core` is a "rendering" library built on top of `vtk.js`.
 which leverages `cornerstone`'s existing plumbing to integrate with image loaders and metadata providers.
 
-This repository's `@cornerstonejs/tools` is a "tools" library that, once initialized, will listen for custom events emitted by `@cornerstonejs/core`. Please note, the event naming and handling overlaps the events and event handling in the `cornerstone-tools` library. If you attempt to use `cornerstone-tools` in tandem, you will likely encounter issues. As this is a possible use case, please don't hesitate to report any issues and propose potential solutions.
+This repository's `@alireza-test-monorepo/tools` is a "tools" library that, once initialized, will listen for custom events emitted by `@alireza-test-monorepo/core`. Please note, the event naming and handling overlaps the events and event handling in the `cornerstone-tools` library. If you attempt to use `cornerstone-tools` in tandem, you will likely encounter issues. As this is a possible use case, please don't hesitate to report any issues and propose potential solutions.

@@ -1,4 +1,4 @@
-import { Types } from '@cornerstonejs/core';
+import { Types } from '@alireza-test-monorepo/core';
 import { ByteArray, DataSet } from 'dicom-parser';
 import ImageFrame from './ImageFrame';
 

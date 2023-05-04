@@ -1,4 +1,4 @@
-import * as cornerstone from '@cornerstonejs/core';
+import * as cornerstone from '@alireza-test-monorepo/core';
 import ptScalingMetaDataProvider from './ptScalingMetaDataProvider';
 
 const { calibratedPixelSpacingMetadataProvider } = cornerstone.utilities;

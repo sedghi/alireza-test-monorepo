@@ -3,7 +3,7 @@ import {
   triggerEvent,
   eventTarget,
   getEnabledElementByIds,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import { Events } from '../../../enums';
 import { Annotation } from '../../../types/AnnotationTypes';
 import { getToolGroupsWithToolName } from '../../../store/ToolGroupManager';

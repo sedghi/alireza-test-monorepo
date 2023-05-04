@@ -1,7 +1,7 @@
-import { RenderingEngine, Types, Enums, CONSTANTS } from '@cornerstonejs/core';
+import { RenderingEngine, Types, Enums, CONSTANTS } from '@alireza-test-monorepo/core';
 import { setTitleAndDescription } from '../../../../utils/demo/helpers';
-import { init as csRenderInit } from '@cornerstonejs/core';
-import { init as csToolsInit } from '@cornerstonejs/tools';
+import { init as csRenderInit } from '@alireza-test-monorepo/core';
+import { init as csToolsInit } from '@alireza-test-monorepo/tools';
 
 import vtkActor from '@kitware/vtk.js/Rendering/Core/Actor';
 import vtkSphereSource from '@kitware/vtk.js/Filters/Sources/SphereSource';

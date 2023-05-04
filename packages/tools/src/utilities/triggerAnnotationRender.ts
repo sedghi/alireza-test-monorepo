@@ -2,7 +2,7 @@ import {
   getEnabledElement,
   triggerEvent,
   getRenderingEngine,
-} from '@cornerstonejs/core';
+} from '@alireza-test-monorepo/core';
 import { Events, ToolModes } from '../enums';
 import { draw as drawSvg } from '../drawingSvg';
 import getToolsWithModesForElement from './getToolsWithModesForElement';

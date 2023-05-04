@@ -1,4 +1,4 @@
-import { eventTarget, triggerEvent } from '@cornerstonejs/core';
+import { eventTarget, triggerEvent } from '@alireza-test-monorepo/core';
 import { Events } from '../../enums';
 import { AnnotationSelectionChangeEventDetail } from '../../types/EventTypes';
 import { getAnnotation } from './annotationState';

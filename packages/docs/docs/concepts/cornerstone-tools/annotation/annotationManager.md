@@ -51,7 +51,7 @@ interface IAnnotationManager {
 To use the Annotation Manager, you can set it as the default Annotation Manager using
 
 ```js
-import { annotation } from '@cornerstonejs/tools';
+import { annotation } from '@alireza-test-monorepo/tools';
 import myCustomAnnotationManager from './myCustomAnnotationManager';
 
 annotation.state.setAnnotationManager(myCustomAnnotationManager);

@@ -1,4 +1,4 @@
-import { utilities as csUtils } from '@cornerstonejs/core';
+import { utilities as csUtils } from '@alireza-test-monorepo/core';
 
 const scalingPerImageId = {};
 

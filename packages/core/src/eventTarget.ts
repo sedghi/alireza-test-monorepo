@@ -1,5 +1,6 @@
 /**
  * EventTarget - Provides the [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) interface
+ * EventTarget - Provides the [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) interface
  */
 class CornerstoneEventTarget implements EventTarget {
   private listeners;

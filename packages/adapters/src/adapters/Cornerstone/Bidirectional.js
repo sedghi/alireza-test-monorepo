@@ -13,7 +13,6 @@ const FINDING_SITE = "G-C0E3";
 
 class Bidirectional {
     // TODO: this function is required for all Cornerstone Tool Adapters, since it is called by MeasurementReport.
-    // TODO: this function is required for all Cornerstone Tool Adapters, since it is called by MeasurementReport.
     static getMeasurementData(MeasurementGroup) {
         const { ContentSequence } = MeasurementGroup;
 

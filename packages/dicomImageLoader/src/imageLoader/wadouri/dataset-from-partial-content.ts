@@ -9,6 +9,7 @@ function fixFragments(dataSet: DataSet) {
   // The partially parsed pixelData element has incorrect fragment
   // lengths because the byte array is truncated, so we manually set
   // it to the actual length.
+  // it to the actual length.
   const fragments = dataSet.elements.x7fe00010.fragments;
   const totalLength = dataSet.byteArray.length;
 

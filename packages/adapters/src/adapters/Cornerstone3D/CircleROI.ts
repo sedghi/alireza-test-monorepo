@@ -16,6 +16,7 @@ class CircleROI {
         isValidCornerstoneTrackingIdentifier;
 
     /** Gets the measurement data for cornerstone, given DICOM SR measurement data. */
+    /** Gets the measurement data for cornerstone, given DICOM SR measurement data. */
     static getMeasurementData(
         MeasurementGroup,
         sopInstanceUIDToImageIdMap,

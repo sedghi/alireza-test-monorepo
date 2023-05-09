@@ -5,6 +5,7 @@ import { triggerSegmentationRepresentationModified } from './triggerSegmentation
 /**
  * Get the active segmentation representation for the tool group with
  * the given toolGroupId.
+ * the given toolGroupId.
  * @param toolGroupId - The Id of the tool group
  * @returns The active segmentation representation for the tool group.
  */

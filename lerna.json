@@ -16,7 +16,6 @@
     "version": {
       "allowBranch": "main",
       "conventionalCommits": true,
-      "createRelease": "github",
       "yes": true,
       "message": "chore(release): publish [skip ci]"
     }

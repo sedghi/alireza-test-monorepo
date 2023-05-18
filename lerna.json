@@ -16,7 +16,8 @@
       "message": "chore(release): publish",
       "registry": "https://registry.npmjs.org/",
       "npmClient": "npm",
-      "yes": true
+      "yes": true,
+      "forcePublish": true
     },
     "version": {
       "allowBranch": "main",

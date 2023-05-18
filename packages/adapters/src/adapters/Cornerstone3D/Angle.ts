@@ -56,6 +56,7 @@ class Angle {
         const state = defaultState;
 
         state.annotation.data = {
+    // KTUQ
             handles: {
                 points: [worldCoords[0], worldCoords[1], worldCoords[3]],
                 activeHandleIndex: 0,

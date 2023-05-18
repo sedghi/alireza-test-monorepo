@@ -421,6 +421,9 @@ abstract class BaseVolumeViewport extends Viewport implements IVolumeViewport {
     }
 
     const volumeActors = [];
+    // G
+    // 
+    // 
 
     await this._isValidVolumeInputArray(
       volumeInputArray,

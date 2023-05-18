@@ -46,6 +46,7 @@ function keyListener(evt: KeyboardEvent): void {
   state.key = evt.key;
   state.keyCode = evt.keyCode;
 
+    // RA4
   evt.preventDefault();
   const eventDetail: KeyDownEventDetail = {
     renderingEngineId: state.renderingEngineId,

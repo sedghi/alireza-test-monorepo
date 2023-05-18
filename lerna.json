@@ -17,14 +17,6 @@
       "registry": "https://registry.npmjs.org/",
       "npmClient": "npm",
       "yes": true
-    },
-    "version": {
-      "allowBranch": "main",
-      "conventionalCommits": true,
-      "yes": true,
-      "message": "chore(release): publish [skip ci]",
-      "createRelease": "github",
-      "forcePublish": true
     }
   }
 }

@@ -61,7 +61,7 @@ jobs:
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - run: git config --global user.email "ar.sedghi@gmail.com"
       - run: git config --global user.name "alireza"
-      - run: npx lerna version
+      - run: npx lerna version --allow-branch main --conventional-commits --yes --no-private --create-release github
       - run: npx lerna publish from-git --yes --force-publish --no-private
 
 workflows:

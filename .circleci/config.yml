@@ -62,7 +62,7 @@ jobs:
       - run: git config --global user.email "ar.sedghi@gmail.com"
       - run: git config --global user.name "alireza"
       - run: npx lerna version
-      - run: npx lerna publish from-package --no-verify-access
+      - run: npx lerna publish from-git --yes
 
 workflows:
   version: 2

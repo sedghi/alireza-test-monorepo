@@ -10,15 +10,6 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
-    "publish": {
-      "allowBranch": "main",
-      "ignoreChanges": ["*.md", "*.yml", "*.spec.js", "*.test.js"],
-      "message": "chore(release): publish",
-      "registry": "https://registry.npmjs.org/",
-      "npmClient": "npm",
-      "yes": true,
-      "forcePublish": true
-    },
     "version": {
       "allowBranch": "main",
       "conventionalCommits": true,

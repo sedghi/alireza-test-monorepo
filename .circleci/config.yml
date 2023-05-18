@@ -57,7 +57,7 @@ jobs:
             mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking
             no\n" > ~/.ssh/config
       - add_ssh_keys:
-          fingerprints: 7e:0f:5b:bb:e3:7a:2e:2f:b4:85:bd:66:09:69:cb:f2
+          fingerprints: b5:50:eb:1f:f1:48:9a:78:f4:43:93:0c:63:8e:23:d4
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - run: git config --global user.email "ar.sedghi@gmail.com"
       - run: git config --global user.name "alireza"

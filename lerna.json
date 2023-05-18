@@ -11,9 +11,11 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
+      "allowBranch": "main",
       "ignoreChanges": ["*.md", "*.yml", "*.spec.js", "*.test.js"],
       "message": "chore(release): publish",
       "registry": "https://registry.npmjs.org/",
+      "npmClient": "npm",
       "yes": true
     },
     "version": {
@@ -21,15 +23,8 @@
       "conventionalCommits": true,
       "yes": true,
       "message": "chore(release): publish [skip ci]",
-      "forcePublish": {
-        "packages": [
-          "packages/adapters",
-          "packages/core",
-          "packages/tools",
-          "packages/streaming-image-volume-loader",
-          "packages/dicomImageLoader"
-        ]
-      }
+      "createRelease": "github",
+      "forcePublish": true
     }
   }
 }

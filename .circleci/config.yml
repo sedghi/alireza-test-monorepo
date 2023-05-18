@@ -88,11 +88,11 @@ workflows:
           filters:
             branches:
               only: main
-      - BUILD:
-          requires:
-            - CHECKOUT
+      # - BUILD:
+      #     requires:
+      #       - CHECKOUT
       - NPM_PUBLISH:
           requires:
-            - BUILD
+            - CHECKOUT
 
 # VS Code Extension Version: 1.5.1

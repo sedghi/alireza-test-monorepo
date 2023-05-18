@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "private": true,
   "repository": "https://github.com/cornerstonejs/cornerstone3D-beta",
   "scripts": {
@@ -31,7 +31,7 @@
     "@alireza-test-monorepo/core": "^1.2.0",
     "@alireza-test-monorepo/dicom-image-loader": "^1.2.0",
     "@alireza-test-monorepo/streaming-image-volume-loader": "^1.2.0",
-    "@alireza-test-monorepo/tools": "^1.2.0",
+    "@alireza-test-monorepo/tools": "^1.3.0",
     "@docusaurus/core": "2.3.1",
     "@docusaurus/module-type-aliases": "2.3.1",
     "@docusaurus/preset-classic": "2.3.1",

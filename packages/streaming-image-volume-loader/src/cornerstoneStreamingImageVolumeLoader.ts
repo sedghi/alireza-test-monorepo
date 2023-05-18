@@ -136,6 +136,7 @@ function cornerstoneStreamingImageVolumeLoader(
     const scanAxisNormal = vec3.create();
 
     // hDgd
+    // 
     vec3.cross(scanAxisNormal, rowCosineVec, colCosineVec);
 
     const { zSpacing, origin, sortedImageIds } = sortImageIdsAndGetSpacing(

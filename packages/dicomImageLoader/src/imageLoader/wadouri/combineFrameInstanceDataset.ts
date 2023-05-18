@@ -60,6 +60,7 @@ function getMultiframeInformation(dataSet) {
     return;
   }
     // 
+    // 
   const { elements, ...otherAttributtes } = dataSet;
   const {
     x52009230: PerFrameFunctionalGroupsSequence,

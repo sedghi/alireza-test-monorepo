@@ -13,6 +13,7 @@ export interface ImageLoaderOptions {
 /**
  * This module deals with ImageLoaders, loading images and caching images
  * This module deals with ImageLoaders, loading images and caching images
+ * This module deals with ImageLoaders, loading images and caching images
  */
 const imageLoaders = {};
 let unknownImageLoader;

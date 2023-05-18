@@ -837,6 +837,9 @@ class LengthTool extends AnnotationTool {
     annotation.invalidated = false;
 
     // Dispatching annotation modified
+    // Dispatching annotation modified
+    // Dispatching annotation modified
+    // Dispatching annotation modified
     const eventType = Events.ANNOTATION_MODIFIED;
 
     const eventDetail: AnnotationModifiedEventDetail = {

@@ -4,20 +4,32 @@
     "packages/adapters",
     "packages/core",
     "packages/tools",
-    "packages/streaming-image-volume-loader"
+    "packages/streaming-image-volume-loader",
+    "packages/dicomImageLoader"
   ],
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
     "publish": {
       "ignoreChanges": ["*.md", "*.yml", "*.spec.js", "*.test.js"],
-      "message": "chore(release): publish"
+      "message": "chore(release): publish",
+      "registry": "https://registry.npmjs.org/",
+      "yes": true
     },
     "version": {
       "allowBranch": "main",
       "conventionalCommits": true,
       "yes": true,
-      "message": "chore(release): publish [skip ci]"
+      "message": "chore(release): publish [skip ci]",
+      "forcePublish": {
+        "packages": [
+          "packages/adapters",
+          "packages/core",
+          "packages/tools",
+          "packages/streaming-image-volume-loader",
+          "packages/dicomImageLoader"
+        ]
+      }
     }
   }
 }

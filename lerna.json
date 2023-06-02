@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "2.2.0-beta.1",
   "packages": [
     "packages/adapters",
     "packages/core",
@@ -14,7 +14,6 @@
     "version": {
       "allowBranch": "main",
       "conventionalCommits": true,
-      "yes": true,
       "message": "chore(release): publish [skip ci]",
       "forcePublish": true
     }

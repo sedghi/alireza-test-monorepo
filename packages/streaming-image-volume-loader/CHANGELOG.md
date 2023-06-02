@@ -3,13 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [2.2.0-beta.1](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.1.0...v2.2.0-beta.1) (2023-06-02)
+# [2.2.0-beta.2](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.2.0-beta.1...v2.2.0-beta.2) (2023-06-02)
 
 **Note:** Version bump only for package @alireza-test-monorepo/streaming-image-volume-loader
 
+# [2.2.0-beta.1](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.1.0...v2.2.0-beta.1) (2023-06-02)
 
-
-
+**Note:** Version bump only for package @alireza-test-monorepo/streaming-image-volume-loader
 
 # [2.1.0](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.0.0...v2.1.0) (2023-05-18)
 

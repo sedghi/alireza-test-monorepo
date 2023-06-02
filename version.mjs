@@ -29,6 +29,13 @@ async function run() {
     if (prereleaseComponents && prereleaseComponents.includes('beta')) {
       // If current version is beta, bump the prerelease version
       nextVersion = semver.inc(currentVersion, 'prerelease', 'beta');
+    } else {
+      // if current version is not beta, and we are in master branch, then
+      // bump the minor and reset the patch and start from beta.1
+      const nextMinorVersion = semver.inc(currentVersion, 'minor');
+      nextVersion = `${semver.major(nextMinorVersion)}.${semver.minor(
+        nextMinorVersion
+      )}.0-beta.1`;
     }
   }
 

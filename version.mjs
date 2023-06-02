@@ -3,35 +3,38 @@ import semver from 'semver';
 import fs from 'fs/promises';
 
 async function run() {
+  console.log('Starting version bump process...');
+
   const { stdout: branchName } = await execa('git', [
     'rev-parse',
     '--abbrev-ref',
     'HEAD',
   ]);
-  // const branchName = 'release';
+  console.log('Current branch:', branchName);
+
   const packageJsonPath = 'packages/core/package.json';
   const packageJson = JSON.parse(await fs.readFile(packageJsonPath, 'utf-8'));
 
   const currentVersion = packageJson.version;
+  console.log('Current version:', currentVersion);
+
   const { stdout: currentCommitHash } = await execa('git', [
     'rev-parse',
     'HEAD',
   ]);
+  console.log('Current commit hash:', currentCommitHash);
+
   let nextVersion;
 
   if (branchName === 'release') {
-    // In release branch, bump the minor version which means if current version
-    // of the code is 3.4.0 then the next version will be 3.5.0
+    console.log('Branch: release');
     nextVersion = semver.inc(currentVersion, 'minor');
   } else {
-    // In the master branch,
+    console.log('Branch: master');
     const prereleaseComponents = semver.prerelease(currentVersion);
     if (prereleaseComponents && prereleaseComponents.includes('beta')) {
-      // If current version is beta, bump the prerelease version
       nextVersion = semver.inc(currentVersion, 'prerelease', 'beta');
     } else {
-      // if current version is not beta, and we are in master branch, then
-      // bump the minor and reset the patch and start from beta.1
       const nextMinorVersion = semver.inc(currentVersion, 'minor');
       nextVersion = `${semver.major(nextMinorVersion)}.${semver.minor(
         nextMinorVersion
@@ -43,15 +46,17 @@ async function run() {
     throw new Error('Could not determine next version');
   }
 
-  // Write the version and commit hash to a file
+  console.log('Next version:', nextVersion);
+
   const versionInfo = { version: nextVersion, commit: currentCommitHash };
   await fs.writeFile('./version.json', JSON.stringify(versionInfo, null, 2));
+  console.log('Version info saved to version.json');
 
-  // Run build command so that the version info is included in the build
-  //
+  console.log('Running build command...');
   await execa('npm', ['run', 'build']);
+  console.log('Build command completed');
 
-  // Set the version using lerna
+  console.log('Setting the version using lerna...');
   await execa('npx', [
     'lerna',
     'version',
@@ -59,23 +64,25 @@ async function run() {
     '--yes',
     '--force-publish',
   ]);
+  console.log('Version set using lerna');
 
-  // Publish to GitHub
+  console.log('Committing and pushing changes...');
   await execa('git', ['add', '-A']);
   await execa('git', [
     'commit',
     '-m',
     `chore(version): Bump version to ${nextVersion}`,
   ]);
-
-  // push to the same branch name
   await execa('git', ['push', 'origin', branchName]);
+  console.log('Changes committed and pushed');
 
-  // Publish each package
+  // Publishing each package
   // await execa('npx', ['lerna', 'publish', 'from-git', '--yes']);
+
+  console.log('Version bump process completed successfully');
 }
 
 run().catch((err) => {
-  console.error(err);
+  console.error('Error encountered during version bump:', err);
   process.exit(1);
 });

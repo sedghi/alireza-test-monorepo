@@ -30,7 +30,6 @@
   "dependencies": {
     "@alireza-test-monorepo/core": "^2.1.0",
     "@alireza-test-monorepo/dicom-image-loader": "^2.1.0",
-    "@alireza-test-monorepo/extension-image-loader": "^2.1.0",
     "@alireza-test-monorepo/streaming-image-volume-loader": "^2.1.0",
     "@alireza-test-monorepo/tools": "^2.1.0",
     "@docusaurus/core": "2.3.1",

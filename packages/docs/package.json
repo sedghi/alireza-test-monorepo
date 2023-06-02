@@ -28,11 +28,11 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@alireza-test-monorepo/core": "file:../core",
-    "@alireza-test-monorepo/dicom-image-loader": "file:../dicomImageLoader",
-    "@alireza-test-monorepo/extension-image-loader": "file:../../extensions/extension-image-loader",
-    "@alireza-test-monorepo/streaming-image-volume-loader": "file:../streaming-image-volume-loader",
-    "@alireza-test-monorepo/tools": "file:../tools",
+    "@alireza-test-monorepo/core": "^2.1.0",
+    "@alireza-test-monorepo/dicom-image-loader": "^2.1.0",
+    "@alireza-test-monorepo/extension-image-loader": "^2.1.0",
+    "@alireza-test-monorepo/streaming-image-volume-loader": "^2.1.0",
+    "@alireza-test-monorepo/tools": "^2.1.0",
     "@docusaurus/core": "2.3.1",
     "@docusaurus/module-type-aliases": "2.3.1",
     "@docusaurus/preset-classic": "2.3.1",

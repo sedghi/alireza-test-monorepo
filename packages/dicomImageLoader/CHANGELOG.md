@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0-beta.2](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.6.0-beta.1...v2.6.0-beta.2) (2023-06-05)
+
+**Note:** Version bump only for package @alireza-test-monorepo/dicom-image-loader
+
+# [2.6.0-beta.1](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.5.0...v2.6.0-beta.1) (2023-06-05)
+
+**Note:** Version bump only for package @alireza-test-monorepo/dicom-image-loader
+
+# [2.5.0](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.4.0...v2.5.0) (2023-06-05)
+
+**Note:** Version bump only for package @alireza-test-monorepo/dicom-image-loader
+
+# [2.4.0](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.3.0...v2.4.0) (2023-06-05)
+
+**Note:** Version bump only for package @alireza-test-monorepo/dicom-image-loader
+
 # [2.3.0](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.2.0-beta.2...v2.3.0) (2023-06-02)
 
 **Note:** Version bump only for package @alireza-test-monorepo/dicom-image-loader

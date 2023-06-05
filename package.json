@@ -3,7 +3,8 @@
   "description": "Cornerstone.js Monorepo Root - Beta",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "extensions/*"
   ],
   "repository": "https://github.com/cornerstonejs/cornerstone3D-beta",
   "sideEffects": false,
@@ -38,6 +39,7 @@
     "test:debug": "karma start ./karma.conf.js --browsers Chrome --no-single-run",
     "lint-staged": "lint-staged",
     "lint": "eslint --quiet -c .eslintrc.json packages/**/src",
+    "lerna:version": "node version.mjs",
     "webpack:watch": "npx lerna run webpack:watch"
   },
   "devDependencies": {

@@ -1,98 +1,250 @@
-# Use the latest 2.1 version of CircleCI pipeline processing engine, see https://circleci.com/docs/2.0/configuration-reference/
-version: 2.1
+// @ts-check
+const { tmpdir } = require('os');
+const { join } = require('path');
+const path = require('path');
 
-defaults: &defaults
-  working_directory: ~/repo
-  # https://circleci.com/docs/2.0/circleci-images/#language-image-variants
-  docker:
-    - image: cimg/node:16.14.2-browsers
-      environment:
-        TERM: xterm # Enable colors in term
+process.env.CHROME_BIN = require('puppeteer').executablePath();
 
-jobs:
-  CHECKOUT:
-    <<: *defaults
-    steps:
-      - checkout
-      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - restore_cache:
-          name: Restore Package Cache
-          keys:
-            - packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - packages-v1-{{ .Branch }}-
-            - packages-v1-
-      - run: yarn install --frozen-lockfile
-      - save_cache:
-          name: Save Package Cache
-          paths:
-            - ~/.cache/yarn
-          key: packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-      - persist_to_workspace:
-          root: ~/repo
-          paths: .
+/**
+ * Required for packages/dicomImageLoader Manually set a temporary output
+ * directory for webpack so that Karma can serve all the required files for
+ * dicomImageLoader, such as wasm files and web-workers. See
+ * https://github.com/ryanclark/karma-webpack/issues/498
+ */
+const output = {
+  path: join(tmpdir(), '_karma_webpack_') + Math.floor(Math.random() * 1000000),
+};
 
-  BUILD:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: ~/repo
-      - run: yarn run build
-      - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - packages/core/dist
-            - packages/tools/dist
-            - packages/streaming-image-volume-loader/dist
-            - packages/adapters/dist
-
-  NPM_PUBLISH:
-    <<: *defaults
-    resource_class: small
-    steps:
-      - attach_workspace:
-          at: ~/repo
-      - run:
-          name: Avoid hosts unknown for github
-          command:
-            mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking
-            no\n" > ~/.ssh/config
-      - add_ssh_keys:
-          fingerprints: 7e:0f:5b:bb:e3:7a:2e:2f:b4:85:bd:66:09:69:cb:f2
-      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - run: git config --global user.email "ar.sedghi@gmail.com"
-      - run: git config --global user.name "alireza"
-      - run: npx lerna version
-      - run: npx lerna publish from-package --no-verify-access
-
-workflows:
-  version: 2
-
-  # PULL REQUEST
-  PULL_REQUEST:
-    jobs:
-      - CHECKOUT:
-          filters:
-            branches:
-              ignore:
-                - main
-                - feature/*
-                - hotfix/*
-      - BUILD:
-          requires:
-            - CHECKOUT
-
-  # MERGE TO MAIN
-  TEST_AND_RELEASE:
-    jobs:
-      - CHECKOUT:
-          filters:
-            branches:
-              only: main
-      - BUILD:
-          requires:
-            - CHECKOUT
-      - NPM_PUBLISH:
-          requires:
-            - BUILD
-
-# VS Code Extension Version: 1.5.1
+/**
+ *
+ * @param { import("karma").Config } config - karma config
+ */
+module.exports = function (config) {
+  config.set({
+    reporters: ['junit', 'coverage', 'spec'],
+    client: {
+      jasmine: {
+        // random: false, // don't randomize the order of tests
+        stopOnFailure: false,
+        failFast: false,
+      },
+      captureConsole: false,
+      clearContext: false,
+    },
+    specReporter: {
+      maxLogLines: 5, // limit number of lines logged per test
+      suppressSummary: true, // do not print summary
+      suppressErrorSummary: true, // do not print error summary
+      suppressFailed: false, // do not print information about failed tests
+      suppressPassed: false, // do not print information about passed tests
+      suppressSkipped: true, // do not print information about skipped tests
+      showSpecTiming: false, // print the time elapsed for each spec
+      failFast: false, // test would finish with error when a first fail occurs
+      prefixes: {
+        success: '  PASS: ', // override prefix for passed tests, default is '✓ '
+        failure: 'FAILED: ', // override prefix for failed tests, default is '✗ '
+        skipped: 'SKIPPED: ', // override prefix for skipped tests, default is '- '
+      },
+    },
+    junitReporter: {
+      outputDir: 'junit',
+      outputFile: 'test-results.xml',
+    },
+    plugins: [
+      'karma-webpack',
+      'karma-jasmine',
+      'karma-chrome-launcher',
+      // Reports / Output
+      'karma-junit-reporter',
+      'karma-coverage',
+      'karma-spec-reporter',
+    ],
+    frameworks: ['jasmine', 'webpack'],
+    customHeaders: [
+      {
+        match: '.*html|js|wasm$',
+        name: 'Cross-Origin-Opener-Policy',
+        value: 'same-origin',
+      },
+      {
+        match: '.*html|js|wasm$',
+        name: 'Cross-Origin-Embedder-Policy',
+        value: 'require-corp',
+      },
+    ],
+    files: [
+      'packages/streaming-image-volume-loader/test/**/*_test.js',
+      'packages/core/test/**/*_test.js',
+      'packages/tools/test/**/*_test.js',
+      'packages/dicomImageLoader/test/**/*_test.ts',
+      /**
+       * Required for packages/dicomImageLoader
+       * Serve all the webpack files from the output path so that karma can load
+       * wasm and web workers required for dicomImageLoader
+       */
+      {
+        pattern: `${output.path}/**/*`,
+        watched: false,
+        included: false,
+      },
+      /**
+       * Required for packages/dicomImageLoader
+       * Serve all the testImages for the dicomImageLoader tests
+       */
+      {
+        pattern: 'packages/dicomImageLoader/testImages/*.dcm',
+        watched: false,
+        included: false,
+        served: true,
+        nocache: false,
+      },
+    ],
+    /**
+     * Required for packages/dicomImageLoader configure /testImages path as a
+     * proxy for all the dicomImageLoader test images
+     */
+    proxies: {
+      '/testImages/': '/base/packages/dicomImageLoader/testImages',
+    },
+    preprocessors: {
+      'packages/streaming-image-volume-loader/test/**/*_test.js': ['webpack'],
+      'packages/core/test/**/*_test.js': ['webpack'],
+      'packages/tools/test/**/*_test.js': ['webpack'],
+      'packages/dicomImageLoader/test/**/*_test.js': ['webpack'],
+    },
+    coverageIstanbulReporter: {
+      reports: ['html', 'text-summary', 'lcovonly'],
+      dir: path.join(__dirname, 'coverage'),
+      fixWebpackSourcePaths: true,
+      'report-config': {
+        html: { outdir: 'html' },
+        linkMapper: '/',
+      },
+    },
+    /*webpackMiddleware: {
+      noInfo: true
+    },*/
+    webpack: {
+      devtool: 'eval-source-map',
+      mode: 'development',
+      /**
+       * Required for dicomImageLoader
+       *
+       * The webpack output directory is manually specified so that all
+       * generated assets, such as wasm, workers etc.. can be found when running
+       * in Karma
+       */
+      output,
+      module: {
+        rules: [
+          {
+            test: /\.(js|jsx|ts|tsx)$/,
+            /**
+             * exclude codecs for dicomImageLoader so that
+             * packages/dicomImageLoader/codecs/* are not processed and
+             * imported as is. See
+             * packages/dicomImageLoader/.webpack/webpack-base.js
+             */
+            exclude: /(node_modules)|(codecs)/,
+            use: ['babel-loader'],
+          },
+          {
+            test: /\.png$/i,
+            use: [
+              {
+                loader: 'url-loader',
+              },
+            ],
+          },
+          /**
+           * Start webpack rules for packages/dicomImageLoader
+           * see packages/dicomImageLoader/.webpack/webpack-base.js
+           */
+          {
+            test: /\.wasm/,
+            type: 'asset/resource',
+          },
+          {
+            test: /\.worker\.(mjs|js|ts)$/,
+            use: [
+              {
+                loader: 'worker-loader',
+              },
+            ],
+          },
+          {
+            test: path.join(
+              path.resolve(__dirname, 'packages/dicomImageLoader'),
+              'codecs',
+              'jpeg.js'
+            ),
+            loader: 'exports-loader',
+            options: {
+              type: 'commonjs',
+              exports: 'JpegImage',
+            },
+          },
+          /**
+           * End webpack rules for packages/dicomImageLoader
+           */
+          {
+            test: /\.ts$/,
+            exclude: [
+              path.resolve(__dirname, 'test'),
+              /**
+               * Exclude dicomImageLoader due to a parsing error that I
+               * suspect is related to wasm modules
+               */ path.resolve(__dirname, 'packages/dicomImageLoader'),
+            ],
+            enforce: 'post',
+            use: {
+              loader: 'istanbul-instrumenter-loader',
+              options: { esModules: true },
+            },
+          },
+        ],
+      },
+      resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+        fallback: {
+          fs: false,
+          path: require.resolve('path-browserify'),
+        },
+        alias: {
+          '@alireza-test-monorepo/core': path.resolve(
+            'packages/core/src/index'
+          ),
+          '@alireza-test-monorepo/tools': path.resolve(
+            'packages/tools/src/index'
+          ),
+          '@alireza-test-monorepo/streaming-image-volume-loader': path.resolve(
+            'packages/streaming-image-volume-loader/src/index'
+          ),
+          '@cornerstonejs/dicom-image-loader': path.resolve(
+            'packages/dicomImageLoader/src/imageLoader/index'
+          ),
+        },
+      },
+    },
+    webpackMiddleware: {
+      noInfo: false,
+    },
+    customLaunchers: {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: [
+          '--disable-translate',
+          '--disable-extensions',
+          '--no-sandbox',
+          '--ignore-gpu-blacklist',
+          '--remote-debugging-port=9229',
+        ],
+      },
+    },
+    browsers: ['ChromeHeadlessNoSandbox'],
+    // browsers: ['Chrome'],
+    // singleRun: true,
+    // colors: true,
+    // autoWatch: true,
+  });
+};

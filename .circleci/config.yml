@@ -61,8 +61,8 @@ jobs:
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - run: git config --global user.email "ar.sedghi@gmail.com"
       - run: git config --global user.name "alireza"
-      - run: npx lerna version
-      - run: npx lerna publish from-package
+      - run: yarn run lerna:version
+      # - run: npx lerna publish from-package
 
 workflows:
   version: 2
@@ -82,17 +82,31 @@ workflows:
             - CHECKOUT
 
   # MERGE TO MAIN
-  TEST_AND_RELEASE:
+  TEST_AND_PUBLISH_MASTER:
     jobs:
       - CHECKOUT:
           filters:
             branches:
               only: main
-      # - BUILD:
-      #     requires:
-      #       - CHECKOUT
-      - NPM_PUBLISH:
+      - BUILD:
           requires:
             - CHECKOUT
+      - NPM_PUBLISH:
+          requires:
+            - BUILD
+
+  # MERGE TO RELEASE
+  TEST_AND_PUBLISH_RELEASE:
+    jobs:
+      - CHECKOUT:
+          filters:
+            branches:
+              only: release
+      - BUILD:
+          requires:
+            - CHECKOUT
+      - NPM_PUBLISH:
+          requires:
+            - BUILD
 
 # VS Code Extension Version: 1.5.1

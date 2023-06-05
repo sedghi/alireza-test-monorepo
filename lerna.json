@@ -1,5 +1,5 @@
 {
-  "version": "2.3.0",
+  "version": "2.6.0-beta.7",
   "packages": [
     "packages/adapters",
     "packages/core",
@@ -9,13 +9,5 @@
     "extensions/extension-image-loader"
   ],
   "npmClient": "yarn",
-  "useWorkspaces": true,
-  "command": {
-    "version": {
-      "allowBranch": "main",
-      "conventionalCommits": true,
-      "message": "chore(release): publish [skip ci]",
-      "forcePublish": true
-    }
-  }
+  "useWorkspaces": true
 }

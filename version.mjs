@@ -38,7 +38,7 @@ async function run() {
       const nextMinorVersion = semver.inc(currentVersion, 'minor');
       nextVersion = `${semver.major(nextMinorVersion)}.${semver.minor(
         nextMinorVersion
-      )}.0-beta.1`;
+      )}.0-beta.0`;
     }
   }
 
@@ -72,11 +72,22 @@ async function run() {
   ]);
   console.log('Version set using lerna');
 
-  await execa('git', ['push', 'origin', branchName]);
-  console.log('Changes committed and pushed');
+  // Publishing each package, if on master/main branch publish beta versions
+  // otherwise publish latest
 
-  // Publishing each package
-  // await execa('npx', ['lerna', 'publish', 'from-git', '--yes']);
+  if (branchName === 'release') {
+    await execa('npx', ['lerna', 'publish', 'from-git', '--yes']);
+  } else {
+    await execa('npx', [
+      'lerna',
+      'publish',
+      'from-git',
+      '--yes',
+      '--npm-tag',
+      'beta',
+    ]);
+  }
+
   console.log('Finished');
 }
 

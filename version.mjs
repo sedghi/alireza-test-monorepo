@@ -3,8 +3,6 @@ import semver from 'semver';
 import fs from 'fs/promises';
 
 async function run() {
-  console.log('Starting version bump process...');
-
   const { stdout: branchName } = await execa('git', [
     'rev-parse',
     '--abbrev-ref',
@@ -37,7 +35,7 @@ async function run() {
     console.log('Branch: release');
     nextVersion = semver.inc(currentVersion, 'minor');
   } else {
-    console.log('Branch: master');
+    console.log('Branch: master/main');
     const prereleaseComponents = semver.prerelease(currentVersion);
     const isBumpBeta = lastCommitMessage.trim().endsWith('[BUMP BETA]');
     console.log('isBumpBeta', isBumpBeta);
@@ -72,8 +70,46 @@ async function run() {
   await fs.writeFile('./version.json', JSON.stringify(versionInfo, null, 2));
   console.log('Version info saved to version.json');
 
-  // Todo: Do we really need to run the build command here?
-  // Todo: Do we really need to run the build command here?
+  // Read the packages from the lerna.json file
+  const lernaJson = JSON.parse(await fs.readFile('lerna.json', 'utf-8'));
+  const packages = lernaJson.packages;
+
+  if (!packages) {
+    throw new Error('Could not find packages in lerna.json');
+  }
+
+  // for each package's package.json file, see if there is a peerdependency,
+  // and for each peer dependency see if it includes a package that
+  // starts with @alireza-test-monorepo, if so update the version to the
+  // next version since lerna will not handle this for us
+
+  for (const packagePath of packages) {
+    const packageJsonPath = `${packagePath}/package.json`;
+    const packageJson = JSON.parse(await fs.readFile(packageJsonPath, 'utf-8'));
+
+    if (!packageJson.peerDependencies) {
+      continue;
+    }
+
+    for (const peerDependency of Object.keys(packageJson.peerDependencies)) {
+      if (peerDependency.startsWith('@alireza-test-monorepo')) {
+        packageJson.peerDependencies[peerDependency] = nextVersion;
+
+        console.log(
+          'updating peerdependency to ',
+          packageJson.peerDependencies[peerDependency]
+        );
+      }
+    }
+
+    await fs.writeFile(
+      packageJsonPath,
+      JSON.stringify(packageJson, null, 2) + '\n'
+    );
+
+    console.log(`Updated ${packageJsonPath}`);
+  }
+
   // Todo: Do we really need to run the build command here?
   // Maybe we need to hook the netlify deploy preview
   // await execa('yarn', ['run', 'build']);
@@ -96,6 +132,7 @@ async function run() {
     'version',
     nextVersion,
     '--yes',
+    '--exact',
     '--force-publish',
     '--message',
     'chore(version): Update package versions [skip ci]',
@@ -104,7 +141,6 @@ async function run() {
 
   // Publishing each package, if on master/main branch publish beta versions
   // otherwise publish latest
-
   if (branchName === 'release') {
     await execa('npx', [
       'lerna',

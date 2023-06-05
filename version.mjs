@@ -94,6 +94,11 @@ async function run() {
     for (const peerDependency of Object.keys(packageJson.peerDependencies)) {
       if (peerDependency.startsWith('@alireza-test-monorepo')) {
         packageJson.peerDependencies[peerDependency] = nextVersion;
+
+        console.log(
+          'updating peerdependency to ',
+          packageJson.peerDependencies[peerDependency]
+        );
       }
     }
 

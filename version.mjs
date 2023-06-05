@@ -24,6 +24,13 @@ async function run() {
   ]);
   console.log('Current commit hash:', currentCommitHash);
 
+  const { stdout: lastCommitMessage } = await execa('git', [
+    'log',
+    '--format=%B',
+    '-n',
+    '1',
+  ]);
+
   let nextVersion;
 
   if (branchName === 'release') {
@@ -32,7 +39,13 @@ async function run() {
   } else {
     console.log('Branch: master');
     const prereleaseComponents = semver.prerelease(currentVersion);
-    if (prereleaseComponents && prereleaseComponents.includes('beta')) {
+    const isBumpBeta = lastCommitMessage.trim().endsWith('[BUMP BETA]');
+
+    if (
+      prereleaseComponents &&
+      prereleaseComponents.includes('beta') &&
+      !isBumpBeta
+    ) {
       nextVersion = semver.inc(currentVersion, 'prerelease', 'beta');
     } else {
       const nextMinorVersion = semver.inc(currentVersion, 'minor');
@@ -52,12 +65,10 @@ async function run() {
   await fs.writeFile('./version.json', JSON.stringify(versionInfo, null, 2));
   console.log('Version info saved to version.json');
 
-  // Run build to ensure that the version.json file is included in the app
-  console.log('Running build command...');
-
   // Todo: Do we really need to run the build command here?
-  await execa('yarn', ['run', 'build']);
-  console.log('Build command completed');
+  // Maybe we need to hook the netlify deploy preview
+  // await execa('yarn', ['run', 'build']);
+  // console.log('Build command completed');
 
   console.log('Committing and pushing changes...');
   await execa('git', ['add', '-A']);

@@ -1368,6 +1368,7 @@ class RenderingEngine implements IRenderingEngine {
 export default RenderingEngine;
 
 // debugging utils for offScreen canvas
+// debugging utils for offScreen canvas
 function _TEMPDownloadURI(uri) {
   const link = document.createElement('a');
 

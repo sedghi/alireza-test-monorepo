@@ -6,6 +6,7 @@ import drawImageSync from '../RenderingEngine/helpers/cpuFallback/drawImageSync'
 
 /**
  * Renders a cornerstone image object to a canvas.
+ * Renders a cornerstone image object to a canvas.
  * Note: this does not load the image but only takes care of the rendering pipeline
  *
  * @param image - Cornerstone image object

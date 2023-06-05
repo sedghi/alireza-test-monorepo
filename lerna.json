@@ -9,13 +9,5 @@
     "extensions/extension-image-loader"
   ],
   "npmClient": "yarn",
-  "useWorkspaces": true,
-  "command": {
-    "version": {
-      "allowBranch": "main",
-      "conventionalCommits": true,
-      "message": "chore(release): publish [skip ci]",
-      "forcePublish": true
-    }
-  }
+  "useWorkspaces": true
 }

@@ -54,12 +54,18 @@ async function run() {
 
   // Run build to ensure that the version.json file is included in the app
   console.log('Running build command...');
+
+  // Todo: Do we really need to run the build command here?
   await execa('yarn', ['run', 'build']);
   console.log('Build command completed');
 
   console.log('Committing and pushing changes...');
   await execa('git', ['add', '-A']);
-  await execa('git', ['commit', '-m', 'chore(version): Update version.json']);
+  await execa('git', [
+    'commit',
+    '-m',
+    'chore(version): version.json [skip ci]',
+  ]);
   await execa('git', ['push', 'origin', branchName]);
 
   console.log('Setting the version using lerna...');
@@ -72,7 +78,7 @@ async function run() {
     '--yes',
     '--force-publish',
     '--message',
-    'chore(version): Update package versions using lerna',
+    'chore(version): Update package versions [skip ci]',
   ]);
   console.log('Version set using lerna');
 
@@ -80,12 +86,19 @@ async function run() {
   // otherwise publish latest
 
   if (branchName === 'release') {
-    await execa('npx', ['lerna', 'publish', 'from-git', '--yes']);
+    await execa('npx', [
+      'lerna',
+      'publish',
+      'from-package',
+      '--no-verify-access',
+      '--yes',
+    ]);
   } else {
     await execa('npx', [
       'lerna',
       'publish',
-      'from-git',
+      'from-package',
+      '--no-verify-access',
       '--yes',
       '--dist-tag',
       'beta',

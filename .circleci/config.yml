@@ -61,7 +61,7 @@ jobs:
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - run: git config --global user.email "ar.sedghi@gmail.com"
       - run: git config --global user.name "alireza"
-      - run: yarn run version
+      - run: yarn run lerna:version
       # - run: npx lerna publish from-package
 
 workflows:

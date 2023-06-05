@@ -63,12 +63,16 @@ async function run() {
   await execa('git', ['push', 'origin', branchName]);
 
   console.log('Setting the version using lerna...');
+
+  // add a message to the commit to indicate that the version was set using lerna
   await execa('npx', [
     'lerna',
     'version',
     nextVersion,
     '--yes',
     '--force-publish',
+    '--message',
+    'chore(version): Update package versions using lerna',
   ]);
   console.log('Version set using lerna');
 
@@ -83,7 +87,7 @@ async function run() {
       'publish',
       'from-git',
       '--yes',
-      '--npm-tag',
+      '--dist-tag',
       'beta',
     ]);
   }

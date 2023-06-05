@@ -73,6 +73,8 @@ async function run() {
   console.log('Version info saved to version.json');
 
   // Todo: Do we really need to run the build command here?
+  // Todo: Do we really need to run the build command here?
+  // Todo: Do we really need to run the build command here?
   // Maybe we need to hook the netlify deploy preview
   // await execa('yarn', ['run', 'build']);
   // console.log('Build command completed');

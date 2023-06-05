@@ -40,6 +40,7 @@ async function run() {
     console.log('Branch: master');
     const prereleaseComponents = semver.prerelease(currentVersion);
     const isBumpBeta = lastCommitMessage.trim().endsWith('[BUMP BETA]');
+    console.log('isBumpBeta', isBumpBeta);
 
     if (
       prereleaseComponents &&
@@ -48,6 +49,7 @@ async function run() {
     ) {
       nextVersion = semver.inc(currentVersion, 'prerelease', 'beta');
     } else {
+      console.log('Bumping minor versoin for beta release');
       const nextMinorVersion = semver.inc(currentVersion, 'minor');
       nextVersion = `${semver.major(nextMinorVersion)}.${semver.minor(
         nextMinorVersion

@@ -1,6 +1,6 @@
 {
   "name": "@alireza-test-monorepo/tools",
-  "version": "2.6.0",
+  "version": "2.7.0-beta.1",
   "description": "Cornerstone3D Tools",
   "main": "dist/umd/index.js",
   "types": "dist/esm/index.d.ts",
@@ -29,7 +29,7 @@
     "webpack:watch": "webpack --mode development --progress --watch  --config ./.webpack/webpack.dev.js"
   },
   "dependencies": {
-    "@alireza-test-monorepo/core": "^2.6.0",
+    "@alireza-test-monorepo/core": "^2.7.0-beta.1",
     "lodash.clonedeep": "4.5.0",
     "lodash.get": "^4.4.2"
   },

@@ -40,6 +40,7 @@ async function run() {
     console.log('Branch: master');
     const prereleaseComponents = semver.prerelease(currentVersion);
     const isBumpBeta = lastCommitMessage.trim().endsWith('[BUMP BETA]');
+    console.log('isBumpBeta', isBumpBeta);
 
     if (
       prereleaseComponents &&
@@ -47,7 +48,13 @@ async function run() {
       !isBumpBeta
     ) {
       nextVersion = semver.inc(currentVersion, 'prerelease', 'beta');
+    } else if (isBumpBeta && prereleaseComponents.includes('beta')) {
+      console.log('Bumping beta version to be fresh beta');
+      nextVersion = `${semver.major(currentVersion)}.${
+        semver.minor(currentVersion) + 1
+      }.0-beta.0`;
     } else {
+      console.log('Bumping minor version for beta release');
       const nextMinorVersion = semver.inc(currentVersion, 'minor');
       nextVersion = `${semver.major(nextMinorVersion)}.${semver.minor(
         nextMinorVersion
@@ -65,6 +72,8 @@ async function run() {
   await fs.writeFile('./version.json', JSON.stringify(versionInfo, null, 2));
   console.log('Version info saved to version.json');
 
+  // Todo: Do we really need to run the build command here?
+  // Todo: Do we really need to run the build command here?
   // Todo: Do we really need to run the build command here?
   // Maybe we need to hook the netlify deploy preview
   // await execa('yarn', ['run', 'build']);

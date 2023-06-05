@@ -30,6 +30,9 @@
   "dependencies": {
     "@alireza-test-monorepo/core": "^2.8.0-beta.0"
   },
+  "peerDependencies": {
+    "@alireza-test/monorepo/tools": "^2.8.0-beta.0"
+  },
   "contributors": [
     {
       "name": "Cornerstone.js Contributors",

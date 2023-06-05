@@ -52,9 +52,15 @@ async function run() {
   await fs.writeFile('./version.json', JSON.stringify(versionInfo, null, 2));
   console.log('Version info saved to version.json');
 
+  // Run build to ensure that the version.json file is included in the app
   console.log('Running build command...');
-  await execa('npm', ['run', 'build']);
+  await execa('yarn', ['run', 'build']);
   console.log('Build command completed');
+
+  console.log('Committing and pushing changes...');
+  await execa('git', ['add', '-A']);
+  await execa('git', ['commit', '-m', 'chore(version): Update version.json']);
+  await execa('git', ['push', 'origin', branchName]);
 
   console.log('Setting the version using lerna...');
   await execa('npx', [
@@ -66,20 +72,12 @@ async function run() {
   ]);
   console.log('Version set using lerna');
 
-  console.log('Committing and pushing changes...');
-  await execa('git', ['add', '-A']);
-  await execa('git', [
-    'commit',
-    '-m',
-    `chore(version): Bump version to ${nextVersion}`,
-  ]);
   await execa('git', ['push', 'origin', branchName]);
   console.log('Changes committed and pushed');
 
   // Publishing each package
   // await execa('npx', ['lerna', 'publish', 'from-git', '--yes']);
-
-  console.log('Version bump process completed successfully');
+  console.log('Finished');
 }
 
 run().catch((err) => {

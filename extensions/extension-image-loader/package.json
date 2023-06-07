@@ -31,8 +31,8 @@
     "@alireza-test-monorepo/core": "2.10.0-beta.0"
   },
   "peerDependencies": {
-    "@alireza-test-monorepo/tools": "2.10.0-beta.0",
-    "@alireza-test-monorepo/tools12121": "2.10.0-beta.0"
+    "@alireza-test-monorepo/tools": "2.10.0-beta.1",
+    "@alireza-test-monorepo/tools12121": "2.10.0-beta.1"
   },
   "contributors": [
     {

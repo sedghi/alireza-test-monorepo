@@ -1313,6 +1313,7 @@ class RenderingEngine implements IRenderingEngine {
   }
 
   // debugging utils for offScreen canvas
+  // debugging utils for offScreen canvas
   _downloadOffScreenCanvas() {
     const dataURL = this._debugRender();
     _TEMPDownloadURI(dataURL);

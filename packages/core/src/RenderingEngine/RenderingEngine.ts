@@ -1309,6 +1309,7 @@ class RenderingEngine implements IRenderingEngine {
    * instance after its `destroy` method has been called.
    * instance after its `destroy` method has been called.
    * instance after its `destroy` method has been called.
+   * instance after its `destroy` method has been called.
    */
   private _throwIfDestroyed() {
     if (this.hasBeenDestroyed) {

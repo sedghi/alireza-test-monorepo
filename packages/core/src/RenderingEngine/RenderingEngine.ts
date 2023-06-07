@@ -1303,9 +1303,6 @@ class RenderingEngine implements IRenderingEngine {
   }
 
   /**
-   * Throws an error if trying to interact with the `RenderingEngine`
-   * instance after its `destroy` method has been called.
-   * instance after its `destroy` method has been called.
    */
   private _throwIfDestroyed() {
     if (this.hasBeenDestroyed) {

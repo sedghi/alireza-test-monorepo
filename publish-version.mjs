@@ -67,12 +67,15 @@ async function run() {
       }
     }
   }
+  try {
+    // remove the .npmrc to not accidentally publish to npm
+    await fs.unlink('.npmrc');
 
-  // remove the .npmrc to not accidentally publish to npm
-  await fs.unlink('.npmrc');
-
-  // rm -f ./.npmrc again
-  await execa('rm', ['-f', '.npmrc']);
+    // rm -f ./.npmrc again
+    await execa('rm', ['-f', '.npmrc']);
+  } catch (err) {
+    // ignore
+  }
 
   // Todo: Do we really need to run the build command here?
   // Maybe we need to hook the netlify deploy preview

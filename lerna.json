@@ -8,6 +8,5 @@
     "packages/dicomImageLoader",
     "extensions/extension-image-loader"
   ],
-  "npmClient": "yarn",
-  "useWorkspaces": true
+  "npmClient": "yarn"
 }

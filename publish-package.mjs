@@ -7,20 +7,30 @@ const MAX_RETRIES = 3;
 const RETRY_DELAY = 5000; // 5 seconds
 
 async function run() {
-  const { stdout: branchName } = await execa('git', ['rev-parse', '--abbrev-ref', 'HEAD']);
+  const { stdout: branchName } = await execa('git', [
+    'rev-parse',
+    '--abbrev-ref',
+    'HEAD',
+  ]);
 
   const lernaJson = JSON.parse(await fs.readFile('lerna.json', 'utf8'));
 
   const packages = lernaJson.packages;
 
+  const rootDir = process.cwd();
   for (const packagePathPattern of packages) {
     const matchingDirectories = glob.sync(packagePathPattern);
 
     for (const packageDirectory of matchingDirectories) {
+      // change back to the root directory
+      process.chdir(rootDir);
+
       const packageJsonPath = path.join(packageDirectory, 'package.json');
 
       try {
-        const packageJsonContent = JSON.parse(await fs.readFile(packageJsonPath, 'utf8'));
+        const packageJsonContent = JSON.parse(
+          await fs.readFile(packageJsonPath, 'utf8')
+        );
 
         if (packageJsonContent.private) {
           console.log(`Skipping private package at ${packageDirectory}`);
@@ -39,18 +49,22 @@ async function run() {
             }
 
             await execa('npm', publishArgs);
-            console.log(`Successfully published package at ${packageDirectory}`);
+            console.log(
+              `Successfully published package at ${packageDirectory}`
+            );
             break;
           } catch (error) {
             retries++;
             console.error(
-              `Failed to publish package at ${packageDirectory}, retrying... (${retries}/${MAX_RETRIES})`
+              `Failed to publish package at ${packageDirectory} with error ${error}, retrying... (${retries}/${MAX_RETRIES})`
             );
-            await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+            await new Promise((resolve) => setTimeout(resolve, RETRY_DELAY));
           }
         }
       } catch (error) {
-        console.error(`An error occurred while processing ${packageDirectory}: ${error}`);
+        console.error(
+          `An error occurred while processing ${packageDirectory}: ${error}`
+        );
       }
     }
   }
@@ -58,7 +72,7 @@ async function run() {
   console.log('Finished');
 }
 
-run().catch(err => {
+run().catch((err) => {
   console.error('Error encountered during package publish:', err);
   process.exit(1);
 });

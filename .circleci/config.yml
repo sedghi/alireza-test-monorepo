@@ -81,7 +81,7 @@ jobs:
       - run:
           name: build half of the packages (to avoid out of memory in circleci)
           command: |
-            yarn run build:package-all
+            yarn run build
       - run:
           name: publish package versions
           command: |

@@ -58,9 +58,6 @@ const VIEWPORT_MIN_SIZE = 2;
  *
  * Rendering engine uses `detect-gpu` external library to detect if GPU is available and
  * it has minimum requirement to be able to render a volume with vtk.js. If GPU is not available
- * RenderingEngine will throw an error if you try to render a volume; however, for StackViewports
- * it is capable of falling back to CPU rendering for Stack images.
- *
  *
  * By default RenderingEngine will use vtk.js enabled pipeline for rendering viewports,
  * however, if a custom rendering pipeline is specified by a custom viewport, it will be used instead.

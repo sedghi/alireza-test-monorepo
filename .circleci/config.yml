@@ -36,6 +36,9 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/repo
+      - run:
+          name: 'Perform the versioning before build'
+          command: node ./version.mjs
       - run: yarn run build
       - persist_to_workspace:
           root: ~/repo

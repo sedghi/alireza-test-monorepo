@@ -35,6 +35,8 @@ type ViewportDisplayCoords = {
 };
 
 // Rendering engines seem to not like rendering things less than 2 pixels per side
+// Rendering engines seem to not like rendering things less than 2 pixels per side
+// Rendering engines seem to not like rendering things less than 2 pixels per side
 const VIEWPORT_MIN_SIZE = 2;
 
 /**

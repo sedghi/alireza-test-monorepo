@@ -57,10 +57,6 @@ const VIEWPORT_MIN_SIZE = 2;
  * viewport.
  *
  *
- *
- *
- *
- *
  * Rendering engine uses `detect-gpu` external library to detect if GPU is available and
  * it has minimum requirement to be able to render a volume with vtk.js. If GPU is not available
  *

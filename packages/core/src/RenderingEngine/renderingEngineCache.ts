@@ -5,9 +5,6 @@ const cache = {};
 const renderingEngineCache = {
   /**
   /**
-  /**
-  /**
-  /**
    * Returns the `RenderingEngine` instance with the given `id`.
    *
    * @param id - The `id` of the `RenderingEngine` instance to fetch.

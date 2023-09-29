@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.11.0-beta.4](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.3...v2.11.0-beta.4) (2023-09-29)
+
+### Bug Fixes
+
+- **release:** try to publish the monorepo thu 10 - making sure everything works ([#55](https://github.com/cornerstonejs/cornerstone3D-beta/issues/55)) ([973be15](https://github.com/cornerstonejs/cornerstone3D-beta/commit/973be15fef95054c87926aad6b6b9629c9f45f99))
+
 # [2.11.0-beta.3](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.2...v2.11.0-beta.3) (2023-09-28)
 
 ### Bug Fixes

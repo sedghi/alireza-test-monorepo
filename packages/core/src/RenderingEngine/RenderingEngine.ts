@@ -40,6 +40,8 @@ type ViewportDisplayCoords = {
 const VIEWPORT_MIN_SIZE = 2;
 
 /**
+ * added by merging into main after release candidate is made # 1
+ *
  * A RenderingEngine takes care of the full pipeline of creating viewports and rendering
  * them on a large offscreen canvas and transmitting this data back to the screen. This allows us
  * to leverage the power of vtk.js whilst only using one WebGL context for the processing, and allowing
@@ -49,16 +51,12 @@ const VIEWPORT_MIN_SIZE = 2;
  * ```js
  * const renderingEngine = new RenderingEngine('pet-ct-rendering-engine');
  * ```
- *
  * There are various ways you can trigger a render on viewports. The simplest is to call `render()`
  * on the rendering engine; however, it will trigger a render on all viewports. A more efficient
  * way to do this is to call `renderViewports([viewportId])` on the rendering engine to
  * trigger a render on a specific viewport(s). Each viewport also has a `.render` method which can be used to trigger a render on that
  * viewport.
  *
- * it has minimum requirement to be able to render a volume with vtk.js. If GPU is not available
- *
- * By default RenderingEngine will use vtk.js enabled pipeline for rendering viewports,
  * however, if a custom rendering pipeline is specified by a custom viewport, it will be used instead.
  * We use this custom pipeline to render a StackViewport on CPU using Cornerstone-legacy cpu rendering pipeline.
  *

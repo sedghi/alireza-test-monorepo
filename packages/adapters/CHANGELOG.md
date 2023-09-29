@@ -3,7 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0-beta.0](https://github.com/dcmjs-org/dcmjs/compare/v2.11.0-beta.6...v2.12.0-beta.0) (2023-09-29)
+
+### Bug Fixes
+
+-   **merge back to main after release:** feat/after release [BUMP BETA] ([1e650b0](https://github.com/dcmjs-org/dcmjs/commit/1e650b05548b10d6f018912ba49493946591601c))
+
 # [2.11.0](https://github.com/dcmjs-org/dcmjs/compare/v2.11.0-beta.4...v2.11.0) (2023-09-29)
+
+**Note:** Version bump only for package @alireza-test-monorepo/adapters
+
+# [2.11.0-beta.6](https://github.com/dcmjs-org/dcmjs/compare/v2.11.0-beta.5...v2.11.0-beta.6) (2023-09-29)
+
+**Note:** Version bump only for package @alireza-test-monorepo/adapters
+
+# [2.11.0-beta.5](https://github.com/dcmjs-org/dcmjs/compare/v2.11.0-beta.4...v2.11.0-beta.5) (2023-09-29)
 
 **Note:** Version bump only for package @alireza-test-monorepo/adapters
 

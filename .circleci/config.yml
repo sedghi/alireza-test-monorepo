@@ -2,12 +2,12 @@
 version: 2.1
 
 defaults: &defaults
-  working_directory: ~/repo
-  # https://circleci.com/docs/2.0/circleci-images/#language-image-variants
   docker:
-    - image: cimg/node:16.14.2-browsers
+    - image: cimg/node:18.18
       environment:
         TERM: xterm # Enable colors in term
+        QUICK_BUILD: true
+  working_directory: ~/repo
 
 jobs:
   CHECKOUT:
@@ -36,6 +36,9 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/repo
+      - run:
+          name: 'Perform the versioning before build'
+          command: node ./version.mjs
       - run: yarn run build
       - persist_to_workspace:
           root: ~/repo
@@ -44,26 +47,62 @@ jobs:
             - packages/tools/dist
             - packages/streaming-image-volume-loader/dist
             - packages/adapters/dist
+            - version.txt
+            - commit.txt
+            - version.json
 
   NPM_PUBLISH:
     <<: *defaults
-    resource_class: small
     steps:
+      - run: yarn -v
+      # Checkout code and ALL Git Tags
+      - checkout
       - attach_workspace:
           at: ~/repo
+      # Use increasingly general patterns to restore cache
+      - restore_cache:
+          name: Restore Yarn and Cypress Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+            - yarn-packages-
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          paths:
+            - ~/.cache/yarn
+          key: yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Avoid hosts unknown for github
-          command:
-            mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking
-            no\n" > ~/.ssh/config
-      - add_ssh_keys:
-          fingerprints: b5:50:eb:1f:f1:48:9a:78:f4:43:93:0c:63:8e:23:d4
-      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - run: git config --global user.email "ar.sedghi@gmail.com"
-      - run: git config --global user.name "alireza"
-      - run: yarn run lerna:version
-      # - run: npx lerna publish from-package
-
+          command: |
+            rm -rf ~/.ssh
+            mkdir ~/.ssh/
+            echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+            git config --global user.email "danny.ri.brown+ohif-bot@gmail.com"
+            git config --global user.name "ohif-bot"
+      - run:
+          name: Authenticate with NPM registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: build half of the packages (to avoid out of memory in circleci)
+          command: |
+            yarn run build
+      - run:
+          name: publish package versions
+          command: |
+            node ./publish-version.mjs
+      - run:
+          name: Again set the NPM registry (was deleted in the version script)
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: publish package dist
+          command: |
+            node ./publish-package.mjs
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - .
 workflows:
   version: 2
 

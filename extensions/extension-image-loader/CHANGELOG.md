@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.11.0-beta.6](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.5...v2.11.0-beta.6) (2023-09-29)
+
+**Note:** Version bump only for package @alireza-test-monorepo/extension-image-loader
+
+# [2.11.0-beta.5](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.4...v2.11.0-beta.5) (2023-09-29)
+
+**Note:** Version bump only for package @alireza-test-monorepo/extension-image-loader
+
+# [2.11.0-beta.4](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.3...v2.11.0-beta.4) (2023-09-29)
+
+**Note:** Version bump only for package @alireza-test-monorepo/extension-image-loader
+
+# [2.11.0-beta.3](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.2...v2.11.0-beta.3) (2023-09-28)
+
+### Bug Fixes
+
+- **release:** try to publish the monorepo thu 9 ([#54](https://github.com/cornerstonejs/cornerstone3D-beta/issues/54)) ([8a61f17](https://github.com/cornerstonejs/cornerstone3D-beta/commit/8a61f17829d21242bbc3b4b824e1039b8bfc1837))
+
+# [2.11.0-beta.1](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.0...v2.11.0-beta.1) (2023-09-26)
+
+**Note:** Version bump only for package @alireza-test-monorepo/extension-image-loader
+
 # [2.6.0-beta.2](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.6.0-beta.1...v2.6.0-beta.2) (2023-06-05)
 
 **Note:** Version bump only for package @alireza-test-monorepo/extension-image-loader

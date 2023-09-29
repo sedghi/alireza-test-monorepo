@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.11.0-beta.6](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.5...v2.11.0-beta.6) (2023-09-29)
+
+### Bug Fixes
+
+- **merge to main2:** add to main again ([#58](https://github.com/cornerstonejs/cornerstone3D-beta/issues/58)) ([1ea770f](https://github.com/cornerstonejs/cornerstone3D-beta/commit/1ea770f01d38eb7f51147bf0e9c5b2d29932a7ba))
+
+# [2.11.0-beta.5](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.4...v2.11.0-beta.5) (2023-09-29)
+
+### Bug Fixes
+
+- **merge to main1:** after releaes candidate, merge number 1 ([#57](https://github.com/cornerstonejs/cornerstone3D-beta/issues/57)) ([4a49b23](https://github.com/cornerstonejs/cornerstone3D-beta/commit/4a49b2323f3fb14c7c7798ddc98ddb5bdc8860aa))
+
+# [2.11.0-beta.4](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.3...v2.11.0-beta.4) (2023-09-29)
+
+### Bug Fixes
+
+- **release:** try to publish the monorepo thu 10 - making sure everything works ([#55](https://github.com/cornerstonejs/cornerstone3D-beta/issues/55)) ([973be15](https://github.com/cornerstonejs/cornerstone3D-beta/commit/973be15fef95054c87926aad6b6b9629c9f45f99))
+
+# [2.11.0-beta.3](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.2...v2.11.0-beta.3) (2023-09-28)
+
+### Bug Fixes
+
+- **release:** try to publish the monorepo thu 7 ([#52](https://github.com/cornerstonejs/cornerstone3D-beta/issues/52)) ([ac82c66](https://github.com/cornerstonejs/cornerstone3D-beta/commit/ac82c66399af42523a4b9864d3d60ffb94ff86a3))
+- **release:** try to publish the monorepo thu 8 ([#53](https://github.com/cornerstonejs/cornerstone3D-beta/issues/53)) ([09c12cd](https://github.com/cornerstonejs/cornerstone3D-beta/commit/09c12cdecd016faf29d93f8f1fcb0d7ec89135d6))
+- **release:** try to publish the monorepo thu 9 ([#54](https://github.com/cornerstonejs/cornerstone3D-beta/issues/54)) ([8a61f17](https://github.com/cornerstonejs/cornerstone3D-beta/commit/8a61f17829d21242bbc3b4b824e1039b8bfc1837))
+
+# [2.11.0-beta.2](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.1...v2.11.0-beta.2) (2023-09-28)
+
+### Bug Fixes
+
+- **release:** try to publish the monorepo ([#49](https://github.com/cornerstonejs/cornerstone3D-beta/issues/49)) ([0261064](https://github.com/cornerstonejs/cornerstone3D-beta/commit/02610642180f88796235d8d5b3035f52a2fcacec))
+- **release:** try to publish the monorepo thu 6 ([#51](https://github.com/cornerstonejs/cornerstone3D-beta/issues/51)) ([25cd60f](https://github.com/cornerstonejs/cornerstone3D-beta/commit/25cd60f191b5e139775c56f7da7b8a20e5764db4))
+- **Tests:** stuff thu 3 ([#48](https://github.com/cornerstonejs/cornerstone3D-beta/issues/48)) ([91da5a8](https://github.com/cornerstonejs/cornerstone3D-beta/commit/91da5a8d4acc35d4ddbcb310ad62ec02b5b5c037))
+- **Test:** thu 2 ([#47](https://github.com/cornerstonejs/cornerstone3D-beta/issues/47)) ([5a0f593](https://github.com/cornerstonejs/cornerstone3D-beta/commit/5a0f5935f0fb429d25c937d0b89af3556b608a5d))
+- **test:** try to publish to master ([#46](https://github.com/cornerstonejs/cornerstone3D-beta/issues/46)) ([39bce65](https://github.com/cornerstonejs/cornerstone3D-beta/commit/39bce658dcb460edd36d4793f4c0e980efa78fdb))
+
+# [2.11.0-beta.1](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.0...v2.11.0-beta.1) (2023-09-26)
+
+**Note:** Version bump only for package @alireza-test-monorepo/core
+
 # [2.6.0-beta.2](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.6.0-beta.1...v2.6.0-beta.2) (2023-06-05)
 
 **Note:** Version bump only for package @alireza-test-monorepo/core

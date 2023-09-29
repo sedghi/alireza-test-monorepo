@@ -73,7 +73,7 @@
     "uuid": "^9.0.0"
   },
   "peerDependencies": {
-    "@alireza-test-monorepo/tools": "2.11.0"
+    "@alireza-test-monorepo/tools": "2.12.0-beta.0"
   },
   "husky": {
     "hooks": {

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/dcmjs-org/dcmjs/compare/v2.11.0...v2.12.0) (2023-09-29)
+
+**Note:** Version bump only for package @alireza-test-monorepo/adapters
+
 # [2.12.0-beta.0](https://github.com/dcmjs-org/dcmjs/compare/v2.11.0-beta.6...v2.12.0-beta.0) (2023-09-29)
 
 ### Bug Fixes

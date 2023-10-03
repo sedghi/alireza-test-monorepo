@@ -46,6 +46,7 @@ const VIEWPORT_MIN_SIZE = 2;
  * [bump beta]
  *
  * Instantiating a rendering engine:
+ * main move 2
  * ```js
  * const renderingEngine = new RenderingEngine('pet-ct-rendering-engine');
  * ```

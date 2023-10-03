@@ -3,9 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [2.12.0](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0...v2.12.0) (2023-09-29)
+# [2.12.0-beta.2](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.12.0-beta.1...v2.12.0-beta.2) (2023-10-03)
 
-**Note:** Version bump only for package root
+### Bug Fixes
+
+- **move 2:** main move 2 ([#63](https://github.com/cornerstonejs/cornerstone3D-beta/issues/63)) ([a087e1d](https://github.com/cornerstonejs/cornerstone3D-beta/commit/a087e1dc6ca650fc54aaa745d433bc3e651310e9))
+
+# [2.12.0-beta.1](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.12.0-beta.0...v2.12.0-beta.1) (2023-10-03)
+
+### Bug Fixes
+
+- **move 1:** main move 1 ([#62](https://github.com/cornerstonejs/cornerstone3D-beta/issues/62)) ([88355cb](https://github.com/cornerstonejs/cornerstone3D-beta/commit/88355cb9f68cf85472a4887a230bb03347b748f4))
 
 # [2.12.0-beta.0](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v2.11.0-beta.6...v2.12.0-beta.0) (2023-09-29)
 

@@ -1,6 +1,6 @@
 {
   "name": "@alireza-test-monorepo/streaming-image-volume-loader",
-  "version": "2.12.0-beta.1",
+  "version": "2.12.0-beta.2",
   "description": "",
   "main": "dist/umd/index.js",
   "types": "dist/esm/index.d.ts",
@@ -28,7 +28,7 @@
     "webpack:watch": "webpack --mode development --progress --watch  --config ./.webpack/webpack.dev.js"
   },
   "dependencies": {
-    "@alireza-test-monorepo/core": "2.12.0-beta.1"
+    "@alireza-test-monorepo/core": "2.12.0-beta.2"
   },
   "contributors": [
     {

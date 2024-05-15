@@ -1,7 +1,8 @@
 
 # DO NOT USE THIS REPO, THIS IS FOR TESTING RELEASE
 
-- Added in the release 3.0
+- Added inside the release 3.0 for testing
+- Added from main for the for/release
 
 Cornerstone is a set of JavaScript libraries that can be used to build web-based medical imaging applications. It provides a framework to build radiology applications such as the [OHIF Viewer](https://ohif.org/).
 

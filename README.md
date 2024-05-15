@@ -1,6 +1,7 @@
 
 # DO NOT USE THIS REPO, THIS IS FOR TESTING RELEASE
 
+- release candidate 3p7
 - move main forward on 3.7 beta
 - For bump 37
 - For bump 37

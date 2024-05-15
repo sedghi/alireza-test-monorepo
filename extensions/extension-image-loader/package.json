@@ -31,7 +31,7 @@
     "@alireza-test-monorepo/core": "3.6.0"
   },
   "peerDependencies": {
-    "@alireza-test-monorepo/tools": "3.6.0\n"
+    "@alireza-test-monorepo/tools": "3.6.1\n"
   },
   "contributors": [
     {

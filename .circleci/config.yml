@@ -49,7 +49,6 @@ jobs:
             - packages/adapters/dist
             - version.txt
             - commit.txt
-            - version.json
 
   NPM_PUBLISH:
     <<: *defaults
@@ -140,12 +139,17 @@ workflows:
       - CHECKOUT:
           filters:
             branches:
-              only: release
+              only: /^release\/.*/
       - BUILD:
           requires:
             - CHECKOUT
-      - NPM_PUBLISH:
+      - HOLD_FOR_APPROVAL:
+          type: approval
           requires:
             - BUILD
+      - NPM_PUBLISH:
+          requires:
+            - HOLD_FOR_APPROVAL
+
 
 # VS Code Extension Version: 1.5.1

@@ -31,13 +31,13 @@ async function run() {
 
   let nextVersion;
 
-  if (branchName === 'release') {
-    console.log('Branch: release');
-    nextVersion = semver.inc(currentVersion, 'minor');
+  if (branchName.startsWith('release')) {
+    await fs.writeFile('./commit.txt', currentCommitHash);
+    return;
   } else {
     console.log('Branch: master/main');
     const prereleaseComponents = semver.prerelease(currentVersion);
-    const isBumpBeta = lastCommitMessage.trim().endsWith('[BUMP BETA]');
+    const isBumpBeta = lastCommitMessage.trim().includes('[BUMP BETA]');
     console.log('isBumpBeta', isBumpBeta);
 
     if (prereleaseComponents) {
@@ -81,7 +81,6 @@ async function run() {
   console.log('Current commit hash:', currentCommitHash);
 
   const versionInfo = { version: nextVersion, commit: currentCommitHash };
-  await fs.writeFile('./version.json', JSON.stringify(versionInfo, null, 2));
   await fs.writeFile('./version.txt', versionInfo.version);
   await fs.writeFile('./commit.txt', versionInfo.commit);
 

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v3.7.0-beta.1...v3.7.0) (2024-05-15)
+
+**Note:** Version bump only for package @alireza-test-monorepo/streaming-image-volume-loader
+
 # [3.7.0-beta.1](https://github.com/cornerstonejs/cornerstone3D-beta/compare/v3.7.0-beta.0...v3.7.0-beta.1) (2024-05-15)
 
 **Note:** Version bump only for package @alireza-test-monorepo/streaming-image-volume-loader

@@ -73,6 +73,9 @@ async function run() {
     }
   }
 
+  console.log('Next version:', nextVersion);
+  return;
+
   if (!nextVersion) {
     throw new Error('Could not determine next version');
   }

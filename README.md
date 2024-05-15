@@ -1,6 +1,7 @@
 
 # DO NOT USE THIS REPO, THIS IS FOR TESTING RELEASE
 
+- add release candidate
 - Main moving forward 2
 - Main moving forward
 - Added inside the release 3.0 for testing
@@ -8,7 +9,6 @@
 
 Cornerstone is a set of JavaScript libraries that can be used to build web-based medical imaging applications. It provides a framework to build radiology applications such as the [OHIF Viewer](https://ohif.org/).
 
-- **Fast:** Cornerstone leverages WebGL to provide high-performance image rendering and WebAssembly for fast image decompression.
 - **Flexible:** Cornerstone provides APIs for defining custom image, volume, and metadata loading schemes, allowing developers to easily connect with proprietary image archives.
 - **Community Driven:** Cornerstone is supported by the [Open Health Imaging Foundation](https://ohif.org/). We publish our roadmap and welcome contributions and collaboration.
 - **Standards Compliant:** Cornerstone's core focus is Radiology, so it provides DICOMweb compatibility out-of-the-box.
